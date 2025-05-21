@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="vL97mT3kFkWpVVWBSBkD8w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="toyota.co.uk/personal-finance" CVScreenId="ee278241-2551-486a-9be8-37c5cba900f9" CvTextArea="1047, 732, 699, 51" CvTextArgument="WE USE WEBSITE COOKIES" CvType="Text" DesignTimeRectangle="962, 717, 1770, 106" ElementType="Text" FullSelectorArgument="&lt;webctrl id='onetrust-policy-title' tag='H2' /&gt;" Guid="882f2145-054f-4987-aebf-cc23342d04dd" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Personal Finance | Discover car finance options | Toyota UK' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="ee278241-2551-486a-9be8-37c5cba900f9" CvElementArea="1192, 1131, 794, 134" CvTextArea="1275, 1182, 621, 45" CvTextArgument="No, take me to cookie settings" CvType="Button" DesignTimeRectangle="1189, 1132, 797, 133" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='onetrust-pc-btn-handler' tag='BUTTON' type='' class='' aaname='No, take me to cookie settings' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='No, take me to cookie settings' /&gt;" Guid="23ade05b-ac4a-4bc5-92c8-a6ebba28ce7a" SearchSteps="FuzzySelector, CV" />
+          <Target CVScreenId="ee278241-2551-486a-9be8-37c5cba900f9" CvElementArea="2022, 1131, 409, 135" CvTextArea="2106, 1182, 237, 45" CvTextArgument="Yes, I agree" CvType="Button" DesignTimeRectangle="2025, 1132, 405, 133" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='onetrust-accept-btn-handler' tag='BUTTON' type='' class='' aaname='Yes, I agree' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Yes, I agree' /&gt;" Guid="5bf59fff-4c55-4924-9626-5f28c9c6e29a" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="fccbeb2198cbc7117482fe5bb1c862f4.png" xmlns="">0WtkXA2lhGUOCX7IPOp8U2A</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="e-B-7rc7J0ikxhumDzP39g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="toyota.co.uk/personal-finance" CVScreenId="9df3e783-ef7c-43a5-b3c8-d5d42199560b" CvElementArea="2022, 1131, 409, 135" CvTextArea="2106, 1182, 237, 45" CvTextArgument="Yes, I agree" CvType="Button" DesignTimeRectangle="2025, 1132, 405, 133" ElementType="Button" FullSelectorArgument="&lt;webctrl id='onetrust-accept-btn-handler' tag='BUTTON' /&gt;" Guid="c9aee9f0-0607-4dd4-aa0f-a0932b0c649d" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Personal Finance | Discover car finance options | Toyota UK' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="9df3e783-ef7c-43a5-b3c8-d5d42199560b" CvElementArea="1192, 1132, 794, 133" CvTextArea="1275, 1182, 621, 45" CvTextArgument="No, take me to cookie settings" CvType="Button" DesignTimeRectangle="1189, 1132, 797, 133" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='onetrust-pc-btn-handler' tag='BUTTON' type='' class='' aaname='No, take me to cookie settings' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='No, take me to cookie settings' /&gt;" Guid="778fa74d-82ca-4ab4-9b75-39b5b252fd89" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="abad48939d5442f377e32b141d0f8930.png" xmlns="">0Y3h2YJzh_EScqbmGeRoBBQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="0PBB9_eF7Ee6JTrVTMYcZQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="toyota.co.uk/personal-finance" CVScreenId="6794f63b-43e0-4795-be68-30fb53607a9a" CvTextArea="2034, 492, 495, 48" CvTextArgument="Finance Calculator (PCP)" CvType="Text" DesignTimeRectangle="2036, 486, 492, 60" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='                               Finance Calculator (PCP)                               Finance Calculator (PCP)                             ' parentid='Skip-to-Main-Content' tag='A' /&gt;" Guid="95d47243-074a-4ac3-9109-b4f439c61e39" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='_17478268181700.b1bc3842392f546e2f94a2860d3ba521_' title='Personal Finance | Discover car finance options | Toyota UK' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="6794f63b-43e0-4795-be68-30fb53607a9a" CvTextArea="1566, 495, 375, 45" CvTextArgument="Hire Purchase (HP)" CvType="Text" DesignTimeRectangle="1570, 486, 370, 60" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='                               Hire Purchase (HP)                               Hire Purchase (HP)                             ' parentid='Skip-to-Main-Content' tag='A' type='' class='cmp-anchormenu__link js-anchor-menu-link ' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Hire Purchase (HP)' /&gt;" Guid="8d1d96f4-90e8-4d81-b7d1-8b0a2f5005e4" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="cc74a31c557344634639654403cacd44.png" xmlns="">0j7ucFTBTM0edbXnClGwZFQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
