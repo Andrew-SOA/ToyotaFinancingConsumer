@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="ztGZwc6o_kyF0vWt_90qoQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="toyota.co.uk/personal-finance" CVScreenId="af144199-4a09-4ab3-a4d4-b9563726ce40" CvElementArea="153, 429, 749, 60" CvType="InputBox" DesignTimeRectangle="155, 433, 747, 55" ElementType="DropDown" FullSelectorArgument="&lt;webctrl aria-role='presentation' tag='IFRAME' /&gt;&lt;webctrl id='codeweaversModels' tag='SELECT' /&gt;" Guid="cfa09671-38d3-4559-8967-aea070e792c9" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='_17479189684180.fcc49be52b3d69054b2cf4804c6b10df_' title='Personal Finance | Discover car finance options | Toyota UK' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="af144199-4a09-4ab3-a4d4-b9563726ce40" CvTextArea="154, 389, 196, 18" CvTextArgument="Cash price of vehicle" CvType="Text" DesignTimeRectangle="155, 382, 411, 30" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='IFRAME' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' /&gt;&lt;webctrl parentid='codeweaversCosts' tag='SPAN' type='' class='codeweaversBoldElement' aaname='Cash price of vehicle' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Cash price of vehicle' /&gt;" Guid="0f1a529c-eb38-4b6c-81b9-69e2ec665f03" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="88058913b95be84d384b760652d2fbbf.png" xmlns="">0HwHGhdkmY0udow5yAoHivQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="ywcCHxsokEOzcd0MrvgwaQ" Reference="HxWOmwt-20CyqVfaaANdiw/AsRRxr0lu0O57IMC9GH9hw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="toyota.co.uk/personal-finance" CVScreenId="3fde3799-75bf-4dc8-96c5-f89631f7d8ce" CvElementArea="151, 762, 753, 57" CvType="InputBox" DesignTimeRectangle="155, 765, 747, 55" ElementType="DropDown" FullSelectorArgument="&lt;webctrl aria-role='presentation' tag='IFRAME' /&gt;&lt;webctrl id='codeweaversVariants' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='IFRAME' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' /&gt;&lt;webctrl id='codeweaversVariants' tag='SELECT' type='' class='' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="5225f151-e66a-441a-a085-d9c66bf1a88f" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='_17479189684180.fcc49be52b3d69054b2cf4804c6b10df_' title='Personal Finance | Discover car finance options | Toyota UK' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="3fde3799-75bf-4dc8-96c5-f89631f7d8ce" CvElementArea="152, 690, 750, 57" CvType="InputBox" DesignTimeRectangle="155, 693, 747, 55" ElementType="DropDown" FullSelectorArgument="&lt;webctrl aria-role='presentation' tag='IFRAME' /&gt;&lt;webctrl id='codeweaversDerivatives' tag='SELECT' /&gt;" Guid="61e53c24-1e73-41a5-83c7-f73ac434f294" SearchSteps="Selector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="1847c21585a9ba6f5e2a034bcd108c94.png" xmlns="">0q4ZyFUEKnE6iAPMFPz0rsg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

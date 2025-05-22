@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Expected Annual Mileage",
+  "Type": "Element",
+  "TaxonomyType": "Dropdown",
+  "Id": "goQliJkcCEeZrybrILLqWg",
+  "Reference": "HxWOmwt-20CyqVfaaANdiw/goQliJkcCEeZrybrILLqWg",
+  "ParentRef": "HxWOmwt-20CyqVfaaANdiw/y2sl4dFxU0ufawSlRyxPEg",
+  "Created": "2025-05-22T13:11:36.8264179Z",
+  "Updated": "2025-05-22T13:11:36.8264179Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

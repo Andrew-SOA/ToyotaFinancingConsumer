@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="ZZ8a1rn1TEaCTMlBMsIlWQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="toyota.co.uk/personal-finance" CVScreenId="ee78a49a-8488-4980-b272-aa84cec2579c" CvElementArea="600, 855, 302, 58" CvType="InputBox" DesignTimeRectangle="603, 858, 299, 55" ElementType="DropDown" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='IFRAME' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' /&gt;&lt;webctrl id='codeweaversMileage' tag='SELECT' type='' class='codeweaversHighlight' aaname='Expected Annual Mileage ' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="05815eb1-f8c2-42af-8987-cb5b8f1f2cef" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='_17479189684180.fcc49be52b3d69054b2cf4804c6b10df_' title='Personal Finance | Discover car finance options | Toyota UK' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="154, 858, 448, 55" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='IFRAME' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' /&gt;&lt;webctrl aaname='Expected Annual Mileage ' tag='LABEL' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Expected Annual Mileage' /&gt;" Guid="379d12e2-e820-44f1-9622-4ddb78d6c75d" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="45701f191103ec4e439d7a877a417d1f.png" xmlns="">0rrEvNQcD6UuqXd9r-1a5Dg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
