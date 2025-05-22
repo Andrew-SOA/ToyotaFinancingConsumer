@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="GmqklY3zeESIii6IIFxwog" Reference="HxWOmwt-20CyqVfaaANdiw/tms_z5tRq06stCKab6pFFA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="toyota.co.uk/personal-finance" CVScreenId="5a144302-4ed9-4e68-8a86-ebf08ddab127" CvType="AnyWordGroup" DesignTimeRectangle="1103, 961, 74, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='IFRAME' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' /&gt;&lt;webctrl class='codeweaversResults' parentid='codeweaversFinanceTab0' tag='DIV' type='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' /&gt;" Guid="c6ecea57-2d0b-4801-93f9-3d13e2f69c12" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Personal Finance | Discover car finance options | Toyota UK' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="5a144302-4ed9-4e68-8a86-ebf08ddab127" CvTextArea="663, 966, 376, 19" CvTextArgument="Guaranteed Future Value/Optional Final Payment" CvType="Text" DesignTimeRectangle="664, 961, 374, 24" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='IFRAME' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' /&gt;&lt;webctrl type='' class='codeweaversResultsLabel codeweaversBoldElement' parentid='codeweaversFinanceTab0' tag='DIV' aaname='Guaranteed Future Value/Optional Final Payment' matching:class='fuzzy' fuzzylevel:class='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Guaranteed Future Value/Optional Final Payment' /&gt;" Guid="624cac72-41cc-48ee-9baf-5b863438e180" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="98d38ccbc6886c214400154d015911c8.png" xmlns="">0B2iIybL5F0qwnmdGDeOfVQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

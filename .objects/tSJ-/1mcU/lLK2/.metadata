@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome Personal Finance  Discover car finance(1)",
+  "Type": "Screen",
+  "Id": "lLK2oOHcbUey9wa8ReanFQ",
+  "Reference": "HxWOmwt-20CyqVfaaANdiw/lLK2oOHcbUey9wa8ReanFQ",
+  "ParentRef": "HxWOmwt-20CyqVfaaANdiw/1mcUy4c2rkqScsdHZXqXag",
+  "Created": "2025-05-21T13:51:37.0824096Z",
+  "Updated": "2025-05-21T13:51:37.0824096Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
