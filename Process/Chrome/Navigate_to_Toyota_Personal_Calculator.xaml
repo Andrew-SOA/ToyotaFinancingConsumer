@@ -1,4 +1,11 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Navigate_to_Toyota_Personal_Financing" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Navigate_to_Toyota_Personal_Financing_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Navigate_to_Toyota_Personal_Financing" this:Navigate_to_Toyota_Personal_Financing.in_ToyotaURL="https://www.toyota.co.uk/personal-finance?srsltid=AfmBOorOZtw5Y-eX9eHn--OY-DuaVnyQJG6F7Ls2nmZYKw42ymhWWx4Z" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_ToyotaURL" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>Navigate_to_Toyota_Personal_Financing_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -38,6 +45,7 @@
       <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>System.ComponentModel</x:String>
+      <x:String>System.Linq.Expressions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -83,47 +91,56 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
       <AssemblyReference>System.ComponentModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Navigate_to_Toyota_Personal_Financing" sap:VirtualizedContainerService.HintSize="1177.2,1412" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Navigate_to_Toyota_Personal_Financing" sap:VirtualizedContainerService.HintSize="1177.2,1448" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome Personal Finance  Discover car finance(3)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1086.4,1388.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="cbde855a-5130-4e51-86c4-920799f1680c" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Open Toyota URL Browser " AttachMode="ByInstance" CloseMode="Never" DisplayName="Open Browser " HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1086.4,1424.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="cbde855a-5130-4e51-86c4-920799f1680c" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1052.8,1148.8" sap2010:WorkflowViewState.IdRef="Sequence_10">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1052.8,1153.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState DisplayName="Check App State 'WE USE WEBSITE COOKIES'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="1019.2,870.4" sap2010:WorkflowViewState.IdRef="NCheckState_2" Version="V4">
+            <uix:NCheckState DisplayName="Check App State 'WE USE WEBSITE COOKIES'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="1019.2,873.6" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="cbde855a-5130-4e51-86c4-920799f1680c" Version="V4">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="516.8,620" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="516.8,623.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome Personal Finance  Discover car finance" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="483.2,558.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="04634c96-37b8-47a0-86f5-faafdb30d637" Version="V2" WindowResize="Maximize">
+                  <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome Personal Finance  Discover car finance" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="483.2,561.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="04634c96-37b8-47a0-86f5-faafdb30d637" Version="V2" WindowResize="Maximize">
                     <uix:NApplicationCard.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,278.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,280" sap2010:WorkflowViewState.IdRef="Sequence_6">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Yes, I agree'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,216.8" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="04634c96-37b8-47a0-86f5-faafdb30d637" Version="V4">
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Yes, I agree'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,218.4" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="04634c96-37b8-47a0-86f5-faafdb30d637" Version="V4">
                             <uix:NClick.Target>
                               <uix:TargetAnchorable BrowserURL="toyota.co.uk/personal-finance" CVScreenId="9df3e783-ef7c-43a5-b3c8-d5d42199560b" ContentHash="e-B-7rc7J0ikxhumDzP39g" CvElementArea="2022, 1131, 409, 135" CvTextArea="2106, 1182, 237, 45" CvTextArgument="Yes, I agree" CvType="Button" DesignTimeRectangle="2025, 1132, 405, 133" ElementType="Button" FullSelectorArgument="&lt;webctrl id='onetrust-accept-btn-handler' tag='BUTTON' /&gt;" Guid="c9aee9f0-0607-4dd4-aa0f-a0932b0c649d" InformativeScreenshot="abad48939d5442f377e32b141d0f8930.png" IsResponsive="True" Reference="HxWOmwt-20CyqVfaaANdiw/KEhByMnP302KyCgFaohWgg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Personal Finance | Discover car finance options | Toyota UK' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
                                 <uix:TargetAnchorable.Anchors>
@@ -165,7 +182,7 @@
               <uix:NCheckState.Target>
                 <uix:TargetAnchorable BrowserURL="toyota.co.uk/personal-finance" CVScreenId="ee278241-2551-486a-9be8-37c5cba900f9" ContentHash="vL97mT3kFkWpVVWBSBkD8w" CvTextArea="1047, 732, 699, 51" CvTextArgument="WE USE WEBSITE COOKIES" CvType="Text" DesignTimeRectangle="962, 717, 1770, 106" ElementType="Text" FullSelectorArgument="&lt;webctrl id='onetrust-policy-title' tag='H2' /&gt;" Guid="882f2145-054f-4987-aebf-cc23342d04dd" InformativeScreenshot="fccbeb2198cbc7117482fe5bb1c862f4.png" IsResponsive="True" Reference="HxWOmwt-20CyqVfaaANdiw/Nt0sKo3JoUCVpCQkVZJUhw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Personal Finance | Discover car finance options | Toyota UK' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="2">
                       <uix:Target CVScreenId="ee278241-2551-486a-9be8-37c5cba900f9" CvElementArea="1192, 1131, 794, 134" CvTextArea="1275, 1182, 621, 45" CvTextArgument="No, take me to cookie settings" CvType="Button" DesignTimeRectangle="1189, 1132, 797, 133" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='onetrust-pc-btn-handler' tag='BUTTON' type='' class='' aaname='No, take me to cookie settings' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='No, take me to cookie settings' /&gt;" Guid="23ade05b-ac4a-4bc5-92c8-a6ebba28ce7a" SearchSteps="FuzzySelector, CV" />
                       <uix:Target CVScreenId="ee278241-2551-486a-9be8-37c5cba900f9" CvElementArea="2022, 1131, 409, 135" CvTextArea="2106, 1182, 237, 45" CvTextArgument="Yes, I agree" CvType="Button" DesignTimeRectangle="2025, 1132, 405, 133" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='onetrust-accept-btn-handler' tag='BUTTON' type='' class='' aaname='Yes, I agree' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Yes, I agree' /&gt;" Guid="5bf59fff-4c55-4924-9626-5f28c9c6e29a" SearchSteps="FuzzySelector, CV" />
                     </scg:List>
@@ -199,8 +216,13 @@
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="1902, -18, 3876, 2076" BrowserType="Chrome" ContentHash="qrUT2YRti0uk_gqFCx-zNA" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAsRAAALEQF/ZF+RAAAAB3RJTUUH5QMQDRIvRhnTBwAABJNJREFUWEfFl+9PVmUYx3lh/Rn1xvkTIahotHDq2gA1UiAwLJDC0pJmZTStKGrSFptE4JBYtiJEik0nOnuVlWu53qTURr6AShGF+KEg8IDit+tz95yHh4dDEjG8t8+e67l+fO/rnPuc+5wTdbsxEgjA3Uasscs4bvxuDBsKgt1uNBvkkEtNUGUWg2LjLiPJ+NS4aNw0vEmngxxyqaEWjaDqDAbJQe4xKoxew2+imUAtGmg53X8dXpLxiHHG8BOdDWihOX0TXtBINVhPP6H/A5poT23Ccxp02Wb4CcwFaE89E0HHvcZcnvbpYA7mmjT5AoOLxa/AERgd1diNGw7s60NDujYw4MCOjPtphMFczBlqYKXRY0xJHh0bc4Idlzr1zanvVF1dqz173taLO15WwdYXHNj4iJFDLjXU+mkazMWcrgE6OWhMSvKO4lzLryp9v0wZGTnKzs7Va0VvqGp/jSorq5WcnObAxkeMHHKpoTZcKwLmXEAD7FoXgk4HnXd1dauiYr+Skh7V4xuydOzYCXVevuLiQ8PDKi5+T8uWxTuw8REjh1xqqEUDLZ+zwZyxNMDWGdrhSPzjzwvavv0lLV4cq9jYBJ369nuN37rljoQ1/vHMT068suqAAxuft/7kUkMtGmihGdEEc+6iAfZv56S4p7dXOwpf0bp16Vq1KllLltynsrJy/dXT4ya4OT6uffs+0jPPbtPA4KADGx8xcsilhlo00EIT7YjlaKaB0KZDh/X1jYqLS9TxE1+rpuYTLV9+v5YujVNOzhZ9XHtQp0//oNy8ApWXV6r/6lUHNj5i5JBLDbVooIUm2hFnoZ0G3FMtMBowsWvKzS1QauoGt5bcYp99Xq+1aze6U7lwYbRiYhIUHf2AVq9OUVbWUw5sfMTIIZcaatFAC020mYO5gg0M04D7w6lhnRDLy9vqCvF5/qamI9q9u1gb0zdpxYoHFR+faDwcJNH50i1GDrnUePVooYm25/fmndLAmjWpesKOqrevL5TIr3eBtbaeV0pKmuq+aNDPZ1scdXUNSjZf62/nJ+V6tWihibZfA5OWgE4TElbq7LkWJ+Ql/pMzqkudl7V+fYaOHm12VzscMRsfsXBxQAMtNNH2W4JJF+GhQ43uAnqnZK+7t8MFsfv6+5WV/bT2ln7g8gEbH7HIfDTQQhNtv4twym1YWPiq3cMPqaHhy5DfyxkeGXE7Hqe8ra3dgY2PWLgWv2igheZ0t6HvRrTNNo+EhCS3v1PorSu/hxub3BFtejLPgY0vPIcaatFAC82Iow9tRP5bcXe3yj+sclfulvzn7F4+qStdXSY+posdHXosLdPdcoCNjxg55FJDLRpoRUwOoa34Ng+jX1RaWqbMzBxt3pyvkpJSNRz+SkWvv6lFi2Ic2PiIkUMuNdSGa0UQehjBzB/HB2r1VvG72rmzSPn5zzuw8RGbzePYOwv/4YUkoMHrEy8k2Pgm4r5HHM7EC0nYW9GdeSVj8CfInXkpZXhOY/5fy73hBQ26nMvlQMv/yCOHl2TM/6dZ+AgWzP/HaeSg2Aj/POfZwXrOwed5VNTfamU+2gKYewwAAAAASUVORK5CYII=" InformativeScreenshot="5bd4140bc5c4a35cbc8d5d9affe5a7ea.jpg" Reference="HxWOmwt-20CyqVfaaANdiw/vWXSdwjpFkyp5aHoCmm6MQ" Selector="&lt;html app='chrome.exe' htmlwindowname='_17478270502840.6b8c9af8749c08c5a60b3361b059610d_' title='Personal Finance | Discover car finance options | Toyota UK' /&gt;" Url="https://www.toyota.co.uk/personal-finance?srsltid=AfmBOorOZtw5Y-eX9eHn--OY-DuaVnyQJG6F7Ls2nmZYKw42ymhWWx4Z" Version="V2" />
+        <uix:TargetApp Area="1902, -18, 3876, 2076" BrowserType="Chrome" ContentHash="_g79Y83coU6Hij31oRHj7Q" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAsRAAALEQF/ZF+RAAAAB3RJTUUH5QMQDRIvRhnTBwAABJNJREFUWEfFl+9PVmUYx3lh/Rn1xvkTIahotHDq2gA1UiAwLJDC0pJmZTStKGrSFptE4JBYtiJEik0nOnuVlWu53qTURr6AShGF+KEg8IDit+tz95yHh4dDEjG8t8+e67l+fO/rnPuc+5wTdbsxEgjA3Uasscs4bvxuDBsKgt1uNBvkkEtNUGUWg2LjLiPJ+NS4aNw0vEmngxxyqaEWjaDqDAbJQe4xKoxew2+imUAtGmg53X8dXpLxiHHG8BOdDWihOX0TXtBINVhPP6H/A5poT23Ccxp02Wb4CcwFaE89E0HHvcZcnvbpYA7mmjT5AoOLxa/AERgd1diNGw7s60NDujYw4MCOjPtphMFczBlqYKXRY0xJHh0bc4Idlzr1zanvVF1dqz173taLO15WwdYXHNj4iJFDLjXU+mkazMWcrgE6OWhMSvKO4lzLryp9v0wZGTnKzs7Va0VvqGp/jSorq5WcnObAxkeMHHKpoTZcKwLmXEAD7FoXgk4HnXd1dauiYr+Skh7V4xuydOzYCXVevuLiQ8PDKi5+T8uWxTuw8REjh1xqqEUDLZ+zwZyxNMDWGdrhSPzjzwvavv0lLV4cq9jYBJ369nuN37rljoQ1/vHMT068suqAAxuft/7kUkMtGmihGdEEc+6iAfZv56S4p7dXOwpf0bp16Vq1KllLltynsrJy/dXT4ya4OT6uffs+0jPPbtPA4KADGx8xcsilhlo00EIT7YjlaKaB0KZDh/X1jYqLS9TxE1+rpuYTLV9+v5YujVNOzhZ9XHtQp0//oNy8ApWXV6r/6lUHNj5i5JBLDbVooIUm2hFnoZ0G3FMtMBowsWvKzS1QauoGt5bcYp99Xq+1aze6U7lwYbRiYhIUHf2AVq9OUVbWUw5sfMTIIZcaatFAC020mYO5gg0M04D7w6lhnRDLy9vqCvF5/qamI9q9u1gb0zdpxYoHFR+faDwcJNH50i1GDrnUePVooYm25/fmndLAmjWpesKOqrevL5TIr3eBtbaeV0pKmuq+aNDPZ1scdXUNSjZf62/nJ+V6tWihibZfA5OWgE4TElbq7LkWJ+Ql/pMzqkudl7V+fYaOHm12VzscMRsfsXBxQAMtNNH2W4JJF+GhQ43uAnqnZK+7t8MFsfv6+5WV/bT2ln7g8gEbH7HIfDTQQhNtv4twym1YWPiq3cMPqaHhy5DfyxkeGXE7Hqe8ra3dgY2PWLgWv2igheZ0t6HvRrTNNo+EhCS3v1PorSu/hxub3BFtejLPgY0vPIcaatFAC82Iow9tRP5bcXe3yj+sclfulvzn7F4+qStdXSY+posdHXosLdPdcoCNjxg55FJDLRpoRUwOoa34Ng+jX1RaWqbMzBxt3pyvkpJSNRz+SkWvv6lFi2Ic2PiIkUMuNdSGa0UQehjBzB/HB2r1VvG72rmzSPn5zzuw8RGbzePYOwv/4YUkoMHrEy8k2Pgm4r5HHM7EC0nYW9GdeSVj8CfInXkpZXhOY/5fy73hBQ26nMvlQMv/yCOHl2TM/6dZ+AgWzP/HaeSg2Aj/POfZwXrOwed5VNTfamU+2gKYewwAAAAASUVORK5CYII=" sap2010:WorkflowViewState.IdRef="TargetApp_1" InformativeScreenshot="5bd4140bc5c4a35cbc8d5d9affe5a7ea.jpg" Reference="HxWOmwt-20CyqVfaaANdiw/vWXSdwjpFkyp5aHoCmm6MQ" Selector="&lt;html app='chrome.exe' htmlwindowname='_17478270502840.6b8c9af8749c08c5a60b3361b059610d_' title='Personal Finance | Discover car finance options | Toyota UK' /&gt;" Url="[in_ToyotaURL]" Version="V2" />
       </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
   </Sequence>
 </Activity>
