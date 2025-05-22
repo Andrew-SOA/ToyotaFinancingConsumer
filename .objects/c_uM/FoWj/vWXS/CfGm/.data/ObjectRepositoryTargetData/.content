@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="czfT29CbTEKLCuoh9BbiGQ" Reference="HxWOmwt-20CyqVfaaANdiw/CfGmbE0ShU2nDsAQqdqASw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="toyota.co.uk/personal-finance" CVScreenId="acdbae35-64a6-4ccf-8012-d4d2ff44b933" CvTextArea="2034, 855, 495, 45" CvTextArgument="Finance Calculator (PCP)" CvType="Text" DesignTimeRectangle="2036, 690, 492, 60" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='                               Finance Calculator (PCP)                               Finance Calculator (PCP)                             ' parentid='Skip-to-Main-Content' tag='A' /&gt;" Guid="095f4026-6d38-41d4-8948-a09c6d9a6bac" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='_17478271289500.126b6937f02e346cab10479dc4c08fa8_' title='Personal Finance | Discover car finance options | Toyota UK' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="acdbae35-64a6-4ccf-8012-d4d2ff44b933" CvTextArea="1566, 855, 375, 45" CvTextArgument="Hire Purchase (HP)" CvType="Text" DesignTimeRectangle="1570, 690, 370, 60" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='                               Hire Purchase (HP)                               Hire Purchase (HP)                             ' parentid='Skip-to-Main-Content' tag='A' type='' class='cmp-anchormenu__link js-anchor-menu-link ' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Hire Purchase (HP)' /&gt;" Guid="c33dcbba-65b4-40cb-ba84-70dc8bb8d127" SearchSteps="FuzzySelector, CV" />
+          <Target CVScreenId="a78a7e35-91c3-40dc-8765-17fb558ffccd" CvTextArea="2619, 699, 180, 51" CvTextArgument="Glossary" CvType="Text" DesignTimeRectangle="2624, 690, 174, 60" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='                               Glossary                               Glossary                             ' parentid='Skip-to-Main-Content' tag='A' type='' class='cmp-anchormenu__link js-anchor-menu-link ' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Glossary' /&gt;" Guid="2d9728d4-1cd0-4a9c-a03d-2bb30577d239" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="87f9b81819a84743d8bbf520858f769b.png" xmlns="">0ROhOMujoGEKL0UiFIBCfiQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
