@@ -1,0 +1,208 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Enter_Client_Details" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Enter_Client_Details_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Enter_Client_Details" sap:VirtualizedContainerService.HintSize="1177.2,594.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Personal Finance | Discover car finance options | Toyota UK" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="483.2,571.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" IsDisplayNameAuto="True" ScopeGuid="0cc64d6d-b6c1-4dc3-ad1e-cfe895ee2779" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,331.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NSelectItem DisplayName="Select Item" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="Choose your Car" ScopeIdentifier="0cc64d6d-b6c1-4dc3-ad1e-cfe895ee2779" Version="V4">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="13">
+                  <x:String>Choose your Car</x:String>
+                  <x:String>All-Electric Toyota bZ4X</x:String>
+                  <x:String>Aygo X</x:String>
+                  <x:String>Corolla</x:String>
+                  <x:String>Hilux</x:String>
+                  <x:String>Prius Plug-in</x:String>
+                  <x:String>Proace City Verso Electric</x:String>
+                  <x:String>Proace Verso Electric</x:String>
+                  <x:String>RAV4 Plug-in</x:String>
+                  <x:String>Toyota C-HR</x:String>
+                  <x:String>Toyota C-HR Plug-in</x:String>
+                  <x:String>Yaris</x:String>
+                  <x:String>Yaris Cross</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="toyota.co.uk/personal-finance" CVScreenId="35a93c60-3512-4e8c-9a9f-8627bef0d193" CvElementArea="267, 1073, 1553, 140" CvType="InputBox" DesignTimeRectangle="255, 1235, 1540, 132" DesignTimeScaleFactor="3" ElementType="DropDown" FullSelectorArgument="&lt;webctrl aria-role='presentation' tag='IFRAME' /&gt;&lt;webctrl id='codeweaversModels' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='IFRAME' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' /&gt;&lt;webctrl id='codeweaversModels' tag='SELECT' type='' class='' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="865474ef-564c-4fe7-be29-b6b1dedd5ce3" InformativeScreenshot="01f2ec4af29b374d3289edb34acf09b7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='_17478272744620.cd0e1d2a57d2d2032b777466ba00f049_' title='Personal Finance | Discover car finance options | Toyota UK' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive">
+                  <uix:TargetAnchorable.PointOffset>
+                    <uix:PointOffset />
+                  </uix:TargetAnchorable.PointOffset>
+                </uix:TargetAnchorable>
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <uix:NSelectItem DisplayName="Select Item ''5 Door Hatchback''" HealingAgentBehavior="SameAsCard" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="5 Door Hatchback" ScopeIdentifier="0cc64d6d-b6c1-4dc3-ad1e-cfe895ee2779" Version="V4">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="1">
+                  <x:String>5 Door Hatchback</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="toyota.co.uk/personal-finance" CVScreenId="6a3a2595-7dfe-418b-a2d4-da8432e01d68" CvElementArea="252, 1402, 1546, 139" CvType="InputBox" DesignTimeRectangle="255, 1409, 1540, 132" DesignTimeScaleFactor="3" ElementType="DropDown" FullSelectorArgument="&lt;webctrl aria-role='presentation' tag='IFRAME' /&gt;&lt;webctrl id='codeweaversDerivatives' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='IFRAME' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' /&gt;&lt;webctrl id='codeweaversDerivatives' tag='SELECT' type='' class='' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="d13f9edb-062e-41ea-b74e-3319f1af5f4c" InformativeScreenshot="d8cf33813b66352c260cd97a27b68f78.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='_17478272744620.cd0e1d2a57d2d2032b777466ba00f049_' title='Personal Finance | Discover car finance options | Toyota UK' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive">
+                  <uix:TargetAnchorable.PointOffset>
+                    <uix:PointOffset />
+                  </uix:TargetAnchorable.PointOffset>
+                </uix:TargetAnchorable>
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <uix:NSelectItem DisplayName="Select Item ''Edge''" HealingAgentBehavior="SameAsCard" sap2010:WorkflowViewState.IdRef="NSelectItem_3" Item="Edge" ScopeIdentifier="0cc64d6d-b6c1-4dc3-ad1e-cfe895ee2779" Version="V4">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="4">
+                  <x:String>Edge</x:String>
+                  <x:String>Exclusive</x:String>
+                  <x:String>JBL Special Edition</x:String>
+                  <x:String>Pure</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="toyota.co.uk/personal-finance" CVScreenId="6a3a2595-7dfe-418b-a2d4-da8432e01d68" CvElementArea="245, 1575, 1556, 142" CvType="InputBox" DesignTimeRectangle="255, 1583, 1540, 132" DesignTimeScaleFactor="3" ElementType="DropDown" FullSelectorArgument="&lt;webctrl aria-role='presentation' tag='IFRAME' /&gt;&lt;webctrl id='codeweaversVariants' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='IFRAME' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' /&gt;&lt;webctrl id='codeweaversVariants' tag='SELECT' type='' class='' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="5476396a-df64-48e4-b280-e48df691b5a7" InformativeScreenshot="563e9152010c883a05fbdbb9951fca13.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='_17478272744620.cd0e1d2a57d2d2032b777466ba00f049_' title='Personal Finance | Discover car finance options | Toyota UK' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive">
+                  <uix:TargetAnchorable.PointOffset>
+                    <uix:PointOffset />
+                  </uix:TargetAnchorable.PointOffset>
+                </uix:TargetAnchorable>
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <uix:NSelectItem DisplayName="Select Item ''1.0 Petrol (72hp) Autom…''" HealingAgentBehavior="SameAsCard" sap2010:WorkflowViewState.IdRef="NSelectItem_4" Item="1.0 Petrol (72hp) Automatic" ScopeIdentifier="0cc64d6d-b6c1-4dc3-ad1e-cfe895ee2779" Version="V4">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="2">
+                  <x:String>1.0 Petrol (72hp) Automatic</x:String>
+                  <x:String>1.0 Petrol (72hp) Manual</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="toyota.co.uk/personal-finance" DesignTimeRectangle="255, 1157, 1540, 132" DesignTimeScaleFactor="3" ElementType="DropDown" FullSelectorArgument="&lt;webctrl aria-role='presentation' tag='IFRAME' /&gt;&lt;webctrl id='codeweaversEngines' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='IFRAME' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' /&gt;&lt;webctrl id='codeweaversEngines' tag='SELECT' type='' class='' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="e2b9180f-af0e-4823-9425-5a14b4a12eb7" InformativeScreenshot="bca6204bc2a85bb7b73a136f9d20d920.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='_17478272744620.cd0e1d2a57d2d2032b777466ba00f049_' title='Personal Finance | Discover car finance options | Toyota UK' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive">
+                  <uix:TargetAnchorable.PointOffset>
+                    <uix:PointOffset />
+                  </uix:TargetAnchorable.PointOffset>
+                </uix:TargetAnchorable>
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into ''Radiobutton''" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="0cc64d6d-b6c1-4dc3-ad1e-cfe895ee2779" Version="V4">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="toyota.co.uk/personal-finance" CVScreenId="c50d6dc3-4796-48a6-adb7-9929f4a46af1" CvElementArea="251, 1480, 1545, 138" CvType="InputBox" DesignTimeRectangle="255, 1487, 1540, 132" DesignTimeScaleFactor="3" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aria-role='presentation' tag='IFRAME' /&gt;&lt;webctrl id='codeweaversDeposit' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='IFRAME' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' /&gt;&lt;webctrl id='codeweaversDeposit' tag='INPUT' type='number' class='codeweaversHighlight' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="eebeef72-da33-4793-8431-9beaef7bf3bd" InformativeScreenshot="8f845fe1de599833a01ad60883cc25ad.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='_17478272744620.cd0e1d2a57d2d2032b777466ba00f049_' title='Personal Finance | Discover car finance options | Toyota UK' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CVScreenId="c50d6dc3-4796-48a6-adb7-9929f4a46af1" CvElementArea="661, 1371, 92, 90" CvTextArea="255, 1395, 393, 57" CvTextArgument="Monthly Payment" CvType="RadioButton" DesignTimeRectangle="255, 1379, 521, 72" ElementType="Text" FullSelectorArgument="&lt;webctrl aria-role='presentation' tag='IFRAME' /&gt;&lt;webctrl aaname='Monthly Payment' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='IFRAME' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' /&gt;&lt;webctrl aaname='Monthly Payment' tag='LABEL' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Monthly Payment' /&gt;" Guid="5c9aac30-8e54-4412-b7c2-2ba2cc95cb51" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                  <uix:TargetAnchorable.PointOffset>
+                    <uix:PointOffset />
+                  </uix:TargetAnchorable.PointOffset>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="1902, -18, 3876, 2076" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAsRAAALEQF/ZF+RAAAAB3RJTUUH5QMQDRIvRhnTBwAABJNJREFUWEfFl+9PVmUYx3lh/Rn1xvkTIahotHDq2gA1UiAwLJDC0pJmZTStKGrSFptE4JBYtiJEik0nOnuVlWu53qTURr6AShGF+KEg8IDit+tz95yHh4dDEjG8t8+e67l+fO/rnPuc+5wTdbsxEgjA3Uasscs4bvxuDBsKgt1uNBvkkEtNUGUWg2LjLiPJ+NS4aNw0vEmngxxyqaEWjaDqDAbJQe4xKoxew2+imUAtGmg53X8dXpLxiHHG8BOdDWihOX0TXtBINVhPP6H/A5poT23Ccxp02Wb4CcwFaE89E0HHvcZcnvbpYA7mmjT5AoOLxa/AERgd1diNGw7s60NDujYw4MCOjPtphMFczBlqYKXRY0xJHh0bc4Idlzr1zanvVF1dqz173taLO15WwdYXHNj4iJFDLjXU+mkazMWcrgE6OWhMSvKO4lzLryp9v0wZGTnKzs7Va0VvqGp/jSorq5WcnObAxkeMHHKpoTZcKwLmXEAD7FoXgk4HnXd1dauiYr+Skh7V4xuydOzYCXVevuLiQ8PDKi5+T8uWxTuw8REjh1xqqEUDLZ+zwZyxNMDWGdrhSPzjzwvavv0lLV4cq9jYBJ369nuN37rljoQ1/vHMT068suqAAxuft/7kUkMtGmihGdEEc+6iAfZv56S4p7dXOwpf0bp16Vq1KllLltynsrJy/dXT4ya4OT6uffs+0jPPbtPA4KADGx8xcsilhlo00EIT7YjlaKaB0KZDh/X1jYqLS9TxE1+rpuYTLV9+v5YujVNOzhZ9XHtQp0//oNy8ApWXV6r/6lUHNj5i5JBLDbVooIUm2hFnoZ0G3FMtMBowsWvKzS1QauoGt5bcYp99Xq+1aze6U7lwYbRiYhIUHf2AVq9OUVbWUw5sfMTIIZcaatFAC020mYO5gg0M04D7w6lhnRDLy9vqCvF5/qamI9q9u1gb0zdpxYoHFR+faDwcJNH50i1GDrnUePVooYm25/fmndLAmjWpesKOqrevL5TIr3eBtbaeV0pKmuq+aNDPZ1scdXUNSjZf62/nJ+V6tWihibZfA5OWgE4TElbq7LkWJ+Ql/pMzqkudl7V+fYaOHm12VzscMRsfsXBxQAMtNNH2W4JJF+GhQ43uAnqnZK+7t8MFsfv6+5WV/bT2ln7g8gEbH7HIfDTQQhNtv4twym1YWPiq3cMPqaHhy5DfyxkeGXE7Hqe8ra3dgY2PWLgWv2igheZ0t6HvRrTNNo+EhCS3v1PorSu/hxub3BFtejLPgY0vPIcaatFAC82Iow9tRP5bcXe3yj+sclfulvzn7F4+qStdXSY+posdHXosLdPdcoCNjxg55FJDLRpoRUwOoa34Ng+jX1RaWqbMzBxt3pyvkpJSNRz+SkWvv6lFi2Ic2PiIkUMuNdSGa0UQehjBzB/HB2r1VvG72rmzSPn5zzuw8RGbzePYOwv/4YUkoMHrEy8k2Pgm4r5HHM7EC0nYW9GdeSVj8CfInXkpZXhOY/5fy73hBQ26nMvlQMv/yCOHl2TM/6dZ+AgWzP/HaeSg2Aj/POfZwXrOwed5VNTfamU+2gKYewwAAAAASUVORK5CYII=" InformativeScreenshot="6b4107115db41320ac4e581bfea23174.jpg" Selector="&lt;html app='chrome.exe' htmlwindowname='_17478272744620.cd0e1d2a57d2d2032b777466ba00f049_' title='Personal Finance | Discover car finance options | Toyota UK' /&gt;" Url="https://www.toyota.co.uk/personal-finance?srsltid=AfmBOorOZtw5Y-eX9eHn--OY-DuaVnyQJG6F7Ls2nmZYKw42ymhWWx4Z" Version="V2" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
