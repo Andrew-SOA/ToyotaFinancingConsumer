@@ -1,6 +1,12 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="CaptureFinancingCalculations" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="in_TransactionItem" Type="InArgument(ui:QueueItem)" />
+    <x:Property Name="out_MonthlyPaymentText" Type="InArgument(x:String)" />
+    <x:Property Name="out_CashPrice" Type="InArgument(x:String)" />
+    <x:Property Name="out_AmountOfCredit" Type="InArgument(x:String)" />
+    <x:Property Name="out_FutureValue" Type="InArgument(x:String)" />
+    <x:Property Name="out_TotalPayable" Type="InArgument(x:String)" />
+    <x:Property Name="out_Term" Type="InArgument(x:String)" />
+    <x:Property Name="out_APR" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -98,38 +104,30 @@
       <AssemblyReference>System.Collections</AssemblyReference>
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CaptureFinancingCalculations" sap:VirtualizedContainerService.HintSize="1797,2270" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CaptureFinancingCalculations" sap:VirtualizedContainerService.HintSize="1981,796.04" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="502,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Capturing Financing Data&quot;]" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome Personal Finance  Discover car finance" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="502,2074" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="1992ee94-748b-464b-8fa6-fb5d3f432195" Version="V2">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Capturing Financing Data&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome Personal Finance  Discover car finance" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="1992ee94-748b-464b-8fa6-fb5d3f432195" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="468,1834" sap2010:WorkflowViewState.IdRef="Sequence_2">
-            <Sequence.Variables>
-              <Variable x:TypeArguments="x:String" Name="tempMonthlyPaymentText" />
-              <Variable x:TypeArguments="x:String" Name="TempCashPrice" />
-              <Variable x:TypeArguments="x:String" Name="TempAmountOfCredit" />
-              <Variable x:TypeArguments="x:String" Name="TempFutureValue" />
-              <Variable x:TypeArguments="x:String" Name="TempTotalPayable" />
-              <Variable x:TypeArguments="x:String" Name="TempTerm" />
-              <Variable x:TypeArguments="x:String" Name="TempAPR" />
-            </Sequence.Variables>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,1378" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NGetText DisplayName="Get Monthly Payment Text" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="1992ee94-748b-464b-8fa6-fb5d3f432195" TextString="[TempMonthlyPaymentText]" Version="V4">
+            <uix:NGetText DisplayName="Get Monthly Payment Text" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,189" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="1992ee94-748b-464b-8fa6-fb5d3f432195" TextString="[out_MonthlyPaymentText]" Version="V4">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="toyota.co.uk/personal-finance" CVScreenId="adc27aac-e507-4eca-b0e3-17a803f6e387" ContentHash="b4YEeM2Og0ir3fdQAe79iQ" DesignTimeRectangle="1117, 716, 60, 24" ElementType="Text" FullSelectorArgument="&lt;webctrl aria-role='presentation' tag='IFRAME' /&gt;&lt;webctrl class='codeweaversResults' idx='2' parentid='codeweaversFinanceTab0' tag='DIV' /&gt;" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='IFRAME' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' /&gt;&lt;webctrl class='codeweaversResults' type='' parentid='codeweaversFinanceTab0' tag='DIV' matching:class='fuzzy' fuzzylevel:class='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' /&gt;" Guid="8cf443a1-e905-4560-8d27-03df6c11d9ea" ImageBase64="" InformativeScreenshot="693afc7862ed2518732bc62950b1f301.png" Reference="HxWOmwt-20CyqVfaaANdiw/t7WY7R7LUkiCdzHyJ7lWfg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Personal Finance | Discover car finance options | Toyota UK' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
                   <uix:TargetAnchorable.Anchors>
@@ -146,21 +144,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NGetText>
-            <Assign DisplayName="Assign - Monthly Payment Text" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="Assign_1">
-              <Assign.To>
-                <OutArgument x:TypeArguments="x:Object">[in_TransactionItem.SpecificContent("Monthly Payment")]</OutArgument>
-              </Assign.To>
-              <Assign.Value>
-                <InArgument x:TypeArguments="x:Object">[tempMonthlyPaymentText]</InArgument>
-              </Assign.Value>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </Assign>
-            <uix:NGetText DisplayName="Get Text 'Cash Price'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="1992ee94-748b-464b-8fa6-fb5d3f432195" TextString="[TempCashPrice]" Version="V4">
+            <uix:NGetText DisplayName="Get Text 'Cash Price'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,189" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="1992ee94-748b-464b-8fa6-fb5d3f432195" TextString="[out_CashPrice]" Version="V4">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="toyota.co.uk/personal-finance" CVScreenId="5a144302-4ed9-4e68-8a86-ebf08ddab127" ContentHash="v8uE5ka_iEeA6IgTmcLrtg" CvType="AnyWordGroup" DesignTimeRectangle="1096, 814, 81, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='IFRAME' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' /&gt;&lt;webctrl class='codeweaversResults' parentid='codeweaversFinanceTab0' tag='DIV' type='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' /&gt;" Guid="f447f1a5-12c6-4e42-aba5-869ca6a2e5ce" ImageBase64="" InformativeScreenshot="a6e2dd40d2a0dc2f5a75a89631e842df.png" Reference="HxWOmwt-20CyqVfaaANdiw/6BLV0tI2eUm-ejfe2zCNyw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Personal Finance | Discover car finance options | Toyota UK' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
                   <uix:TargetAnchorable.Anchors>
@@ -177,21 +161,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NGetText>
-            <Assign DisplayName="Assign - Cash Price" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="Assign_2">
-              <Assign.To>
-                <OutArgument x:TypeArguments="x:Object">[in_TransactionItem.SpecificContent("Cash Price")]</OutArgument>
-              </Assign.To>
-              <Assign.Value>
-                <InArgument x:TypeArguments="x:Object">[TempCashPrice]</InArgument>
-              </Assign.Value>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </Assign>
-            <uix:NGetText DisplayName="Get Text 'Amount of Credit'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="1992ee94-748b-464b-8fa6-fb5d3f432195" TextString="[TempAmountOfCredit]" Version="V4">
+            <uix:NGetText DisplayName="Get Text 'Amount of Credit'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,189" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="1992ee94-748b-464b-8fa6-fb5d3f432195" TextString="[out_AmountOfCredit]" Version="V4">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="toyota.co.uk/personal-finance" CVScreenId="5a144302-4ed9-4e68-8a86-ebf08ddab127" ContentHash="_UZLBCT6hEGG-4bPrnhAbw" CvType="AnyWordGroup" DesignTimeRectangle="1096, 912, 81, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='IFRAME' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' /&gt;&lt;webctrl class='codeweaversResults' parentid='codeweaversFinanceTab0' tag='DIV' type='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' /&gt;" Guid="ba25b467-3460-44da-bf60-0be68f58076f" ImageBase64="" InformativeScreenshot="99f7b31efaf38153fe6edb374b511475.png" Reference="HxWOmwt-20CyqVfaaANdiw/GZLUGJSoo02fX7sViELn-Q" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Personal Finance | Discover car finance options | Toyota UK' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
                   <uix:TargetAnchorable.Anchors>
@@ -208,21 +178,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NGetText>
-            <Assign DisplayName="Assign - Amount Of Credit" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="Assign_3">
-              <Assign.To>
-                <OutArgument x:TypeArguments="x:Object">[in_TransactionItem.SpecificContent("Amount of Credit")]</OutArgument>
-              </Assign.To>
-              <Assign.Value>
-                <InArgument x:TypeArguments="x:Object">[TempAmountOfCredit]</InArgument>
-              </Assign.Value>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </Assign>
-            <uix:NGetText DisplayName="Get Text 'Guaranteed Future Value…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="1992ee94-748b-464b-8fa6-fb5d3f432195" TextString="[TempFutureValue]" Version="V4">
+            <uix:NGetText DisplayName="Get Text 'Guaranteed Future Value…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,189" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="1992ee94-748b-464b-8fa6-fb5d3f432195" TextString="[out_FutureValue]" Version="V4">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="toyota.co.uk/personal-finance" CVScreenId="5a144302-4ed9-4e68-8a86-ebf08ddab127" ContentHash="GmqklY3zeESIii6IIFxwog" CvType="AnyWordGroup" DesignTimeRectangle="1103, 961, 74, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='IFRAME' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' /&gt;&lt;webctrl class='codeweaversResults' parentid='codeweaversFinanceTab0' tag='DIV' type='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' /&gt;" Guid="c6ecea57-2d0b-4801-93f9-3d13e2f69c12" ImageBase64="" InformativeScreenshot="98d38ccbc6886c214400154d015911c8.png" Reference="HxWOmwt-20CyqVfaaANdiw/tms_z5tRq06stCKab6pFFA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Personal Finance | Discover car finance options | Toyota UK' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
                   <uix:TargetAnchorable.Anchors>
@@ -239,21 +195,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NGetText>
-            <Assign DisplayName="Assign - Future Value" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="Assign_4">
-              <Assign.To>
-                <OutArgument x:TypeArguments="x:Object">[in_TransactionItem.SpecificContent("Guaranteed Future Value / Optional Final Payment")]</OutArgument>
-              </Assign.To>
-              <Assign.Value>
-                <InArgument x:TypeArguments="x:Object">[TempFutureValue]</InArgument>
-              </Assign.Value>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </Assign>
-            <uix:NGetText DisplayName="Get Text 'Total Amount Payable'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="1992ee94-748b-464b-8fa6-fb5d3f432195" TextString="[TempTotalPayable]" Version="V4">
+            <uix:NGetText DisplayName="Get Text 'Total Amount Payable'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,189" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="1992ee94-748b-464b-8fa6-fb5d3f432195" TextString="[out_TotalPayable]" Version="V4">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="toyota.co.uk/personal-finance" CVScreenId="5a144302-4ed9-4e68-8a86-ebf08ddab127" ContentHash="WjPEI0Z12UaLx3ioORUfgg" CvType="AnyWordGroup" DesignTimeRectangle="1098, 1010, 79, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='IFRAME' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' /&gt;&lt;webctrl class='codeweaversResults' parentid='codeweaversFinanceTab0' tag='DIV' type='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' /&gt;" Guid="6aa8d3a0-a5f1-4a6e-b890-dd734d4726df" ImageBase64="" InformativeScreenshot="4cc4c4430068abb24b275f923744625e.png" Reference="HxWOmwt-20CyqVfaaANdiw/8FzANioBbEKd7_XdmBTnuA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Personal Finance | Discover car finance options | Toyota UK' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
                   <uix:TargetAnchorable.Anchors>
@@ -270,21 +212,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NGetText>
-            <Assign DisplayName="Assign - TotalAmountPayable" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="Assign_5">
-              <Assign.To>
-                <OutArgument x:TypeArguments="x:Object">[in_TransactionItem.SpecificContent("Total Amount Payable")]</OutArgument>
-              </Assign.To>
-              <Assign.Value>
-                <InArgument x:TypeArguments="x:Object">[TempTotalPayable]</InArgument>
-              </Assign.Value>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </Assign>
-            <uix:NGetText DisplayName="Get Text - Term" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NGetText_6" ScopeIdentifier="1992ee94-748b-464b-8fa6-fb5d3f432195" TextString="[TempTerm]" Version="V4">
+            <uix:NGetText DisplayName="Get Text - Term" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,189" sap2010:WorkflowViewState.IdRef="NGetText_6" ScopeIdentifier="1992ee94-748b-464b-8fa6-fb5d3f432195" TextString="[out_Term]" Version="V4">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="toyota.co.uk/personal-finance/personal-contract-purchase" CVScreenId="8c3c3fa5-22c9-4c58-b7bc-9ea22af5b45e" ContentHash="DdcE5yyEXUGZ86Ds3vsK8w" CvType="AnyWordGroup" DesignTimeRectangle="1097, 1059, 80, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='IFRAME' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' /&gt;&lt;webctrl class='codeweaversResults' parentid='codeweaversFinanceTab0' tag='DIV' type='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' /&gt;" Guid="98ea46c7-34cf-4e2d-bae3-54c9686b47e5" ImageBase64="" InformativeScreenshot="46848d044d9fefdda518407c66dc93f5.png" Reference="HxWOmwt-20CyqVfaaANdiw/K7-T68xEbEWg07JKbh5ozA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Personal Contract Purchase | Personal Finance | Toyota UK' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
                   <uix:TargetAnchorable.Anchors>
@@ -301,21 +229,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NGetText>
-            <Assign DisplayName="Assign - Term" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="Assign_6">
-              <Assign.To>
-                <OutArgument x:TypeArguments="x:Object">[in_TransactionItem.SpecificContent("Term")]</OutArgument>
-              </Assign.To>
-              <Assign.Value>
-                <InArgument x:TypeArguments="x:Object">[TempTerm]</InArgument>
-              </Assign.Value>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </Assign>
-            <uix:NGetText DisplayName="Get Text - APR" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NGetText_7" ScopeIdentifier="1992ee94-748b-464b-8fa6-fb5d3f432195" TextString="[TempAPR]" Version="V4">
+            <uix:NGetText DisplayName="Get Text - APR" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,182" sap2010:WorkflowViewState.IdRef="NGetText_7" ScopeIdentifier="1992ee94-748b-464b-8fa6-fb5d3f432195" TextString="[out_APR]" Version="V4">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="toyota.co.uk/personal-finance/personal-contract-purchase" CVScreenId="8c3c3fa5-22c9-4c58-b7bc-9ea22af5b45e" ContentHash="IsGXK2KC6U647zoivytpyA" CvType="AnyWordGroup" DesignTimeRectangle="1108, 1157, 69, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='IFRAME' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' /&gt;&lt;webctrl class='codeweaversResults' parentid='codeweaversFinanceTab0' tag='DIV' type='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' /&gt;" Guid="ca46bb38-ea1d-4d3f-ad29-5f3809b911aa" ImageBase64="" InformativeScreenshot="111c78d2ebef23a73f16bae501000f54.png" Reference="HxWOmwt-20CyqVfaaANdiw/-tEccXQ8skaIfqL2e1bx_g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Personal Contract Purchase | Personal Finance | Toyota UK' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
                   <uix:TargetAnchorable.Anchors>
@@ -332,20 +246,6 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NGetText>
-            <Assign DisplayName="Assign - APR" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Assign_7">
-              <Assign.To>
-                <OutArgument x:TypeArguments="x:Object">[in_TransactionItem.SpecificContent("APR")]</OutArgument>
-              </Assign.To>
-              <Assign.Value>
-                <InArgument x:TypeArguments="x:Object">[TempAPR]</InArgument>
-              </Assign.Value>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </Assign>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
@@ -354,7 +254,7 @@
       </uix:NApplicationCard.TargetApp>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
