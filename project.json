@@ -84,6 +84,14 @@
         "testCaseType": "TestCase",
         "executionTemplateType": "Local",
         "fileName": "Tests\\WorkflowTestCaseTemplate.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "d107fc73-b6ed-4fa1-9bbe-4c2b6f128f54",
+        "dataVariationFilePath": ".variations\\ToyotaPricing0525_Aygo X.json",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Enter_Client_Details_Test.xaml"
       }
     ],
     "saveToCloud": false
