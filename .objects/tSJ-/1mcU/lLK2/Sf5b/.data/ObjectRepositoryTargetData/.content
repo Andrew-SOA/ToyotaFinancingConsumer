@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="PXCkiNQOIESIZihoQJ_rCQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="toyota.co.uk/personal-finance" CVScreenId="19a2570e-4a3c-4ded-8d38-c0666a5d54eb" CvElementArea="82, 705, 516, 46" CvType="InputBox" DesignTimeRectangle="82, 704, 517, 46" ElementType="InputBox" Guid="7c263ae4-0720-4dcf-a570-c52582f166f9" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='_17478354928080.7faf225da601b9818f4ebf48f01316a9_' title='Personal Finance | Discover car finance options | Toyota UK' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="19a2570e-4a3c-4ded-8d38-c0666a5d54eb" CvTextArea="100, 721, 128, 19" CvTextArgument="Choose your Car" CvType="Text" DesignTimeRectangle="100, 721, 128, 19" ElementType="Text" Guid="3b1853d0-2f07-4c0c-81da-2b86a422cb30" SearchSteps="CV" TargetType="ComputerVisionBased" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="9bb32192a6058be96a0315f32990ea14.png" xmlns="">0SgpzIs33SkK6xjGwOGgeHQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">SelectItem</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

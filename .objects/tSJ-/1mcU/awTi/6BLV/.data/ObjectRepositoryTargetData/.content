@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="v8uE5ka_iEeA6IgTmcLrtg" Reference="HxWOmwt-20CyqVfaaANdiw/6BLV0tI2eUm-ejfe2zCNyw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="toyota.co.uk/personal-finance" CVScreenId="5a144302-4ed9-4e68-8a86-ebf08ddab127" CvType="AnyWordGroup" DesignTimeRectangle="1096, 814, 81, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='IFRAME' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' /&gt;&lt;webctrl class='codeweaversResults' parentid='codeweaversFinanceTab0' tag='DIV' type='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' /&gt;" Guid="f447f1a5-12c6-4e42-aba5-869ca6a2e5ce" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Personal Finance | Discover car finance options | Toyota UK' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="5a144302-4ed9-4e68-8a86-ebf08ddab127" CvTextArea="663, 819, 80, 15" CvTextArgument="Cash Price" CvType="Text" DesignTimeRectangle="664, 814, 79, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='IFRAME' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' /&gt;&lt;webctrl type='' class='codeweaversResultsLabel codeweaversBoldElement' isleaf='1' parentid='codeweaversFinanceTab0' tag='DIV' aaname='                             Cash Price                         ' matching:class='fuzzy' fuzzylevel:class='0.0' matching:isleaf='fuzzy' fuzzylevel:isleaf='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Cash Price' /&gt;" Guid="d10d9a7c-4e95-4427-9984-19d0a950d66b" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="a6e2dd40d2a0dc2f5a75a89631e842df.png" xmlns="">0gjPGt448dUa0G8UQAxbj0g</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

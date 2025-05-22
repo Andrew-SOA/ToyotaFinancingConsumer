@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="WjPEI0Z12UaLx3ioORUfgg" Reference="HxWOmwt-20CyqVfaaANdiw/8FzANioBbEKd7_XdmBTnuA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="toyota.co.uk/personal-finance" CVScreenId="5a144302-4ed9-4e68-8a86-ebf08ddab127" CvType="AnyWordGroup" DesignTimeRectangle="1098, 1010, 79, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='IFRAME' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' /&gt;&lt;webctrl class='codeweaversResults' parentid='codeweaversFinanceTab0' tag='DIV' type='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' /&gt;" Guid="6aa8d3a0-a5f1-4a6e-b890-dd734d4726df" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Personal Finance | Discover car finance options | Toyota UK' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="5a144302-4ed9-4e68-8a86-ebf08ddab127" CvTextArea="662, 1015, 167, 19" CvTextArgument="Total Amount Payable" CvType="Text" DesignTimeRectangle="664, 1010, 164, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='IFRAME' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' /&gt;&lt;webctrl aaname='Total Amount Payable' parentid='codeweaversFinanceTab0' tag='DIV' type='' class='codeweaversResultsLabel codeweaversBoldElement' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Total Amount Payable' /&gt;" Guid="31b74f36-03b6-40ad-a05f-192b999f291a" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="4cc4c4430068abb24b275f923744625e.png" xmlns="">0k3yv02wVdkyZU0C70v7iWw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

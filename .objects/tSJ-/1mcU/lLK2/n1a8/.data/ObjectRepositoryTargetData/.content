@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="VF_yGqmy00eufy1RYQNuXw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="toyota.co.uk/personal-finance" CVScreenId="9c993f3b-9fb6-4af4-972f-06491a7a5288" CvTextArea="788, 476, 38, 12" CvTextArgument="AYGO X" CvType="Text" DesignTimeRectangle="257, 262, 748, 330" ElementType="Icon" FullSelectorArgument="&lt;webctrl aria-role='presentation' tag='IFRAME' /&gt;&lt;webctrl id='codeweaversVehicleImage' tag='IMG' /&gt;" Guid="f9ba0685-5930-4338-93b3-48bcf16601c6" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='_17478372401760.2b97756249217e2ad5035291d3f02c01_' title='Personal Finance | Discover car finance options | Toyota UK' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+      <imageRef attrName="InformativeScreenshot" originalValue="7d745239660b436c7d8a8c269df00ea6.png" xmlns="">0U1EgvuCgu0edXhSi7Ik9XQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

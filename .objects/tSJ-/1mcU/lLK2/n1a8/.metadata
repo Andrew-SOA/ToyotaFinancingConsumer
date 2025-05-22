@@ -1,0 +1,14 @@
+﻿{
+  "Name": "IMG codeweaversVehicleI…",
+  "Type": "Element",
+  "TaxonomyType": "Icon",
+  "Id": "n1a8msdSEUmYQdNf0XmSWg",
+  "Reference": "HxWOmwt-20CyqVfaaANdiw/n1a8msdSEUmYQdNf0XmSWg",
+  "ParentRef": "HxWOmwt-20CyqVfaaANdiw/lLK2oOHcbUey9wa8ReanFQ",
+  "Created": "2025-05-21T14:59:44.4943483Z",
+  "Updated": "2025-05-21T14:59:44.4943483Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
