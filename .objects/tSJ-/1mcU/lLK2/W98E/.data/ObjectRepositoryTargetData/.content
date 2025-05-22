@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="bkrAiYifH0CwwGOJjhRCeA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="toyota.co.uk/personal-finance" CVScreenId="0278eddc-6e3b-48ef-8435-a758a7908668" DesignTimeRectangle="671, 276, 164, 20" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='                               Finance Calculator (PCP)                               Finance Calculator (PCP)                             ' parentid='Skip-to-Main-Content' tag='A' /&gt;" Guid="66067e0a-4677-4975-9cbc-f54f1b75e86a" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='_17478354928080.7faf225da601b9818f4ebf48f01316a9_' title='Personal Finance | Discover car finance options | Toyota UK' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+      <imageRef attrName="InformativeScreenshot" originalValue="7f4d0504307c9b779b9eab5efa90c91f.png" xmlns="">0r64bM23vWk-90EI4e-7BOw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
