@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Finance Calculator (PCP…",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "oDe5sxnB-0-975FaCYWQHQ",
+  "Reference": "HxWOmwt-20CyqVfaaANdiw/oDe5sxnB-0-975FaCYWQHQ",
+  "ParentRef": "HxWOmwt-20CyqVfaaANdiw/8VcbR362EUqJo0K5X079Pg",
+  "Created": "2025-05-22T14:32:51.7156854Z",
+  "Updated": "2025-05-22T14:32:51.7156854Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Choose your Car",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "qa6jUKW9GE6F9eiJuj3i-A",
+  "Reference": "HxWOmwt-20CyqVfaaANdiw/qa6jUKW9GE6F9eiJuj3i-A",
+  "ParentRef": "HxWOmwt-20CyqVfaaANdiw/8VcbR362EUqJo0K5X079Pg",
+  "Created": "2025-05-22T14:34:04.3014828Z",
+  "Updated": "2025-05-22T14:34:04.3014828Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

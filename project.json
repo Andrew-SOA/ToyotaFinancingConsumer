@@ -92,6 +92,13 @@
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
         "fileName": "Enter_Client_Details_Test.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "ba0ecfcf-3d07-482e-b416-7c9bf7e1e1b9",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Process\\Chrome\\CaptureFinancingCalulationsTest.xaml"
       }
     ],
     "saveToCloud": false

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="oPRX4o3q-U6EqluJQ4z1bg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="toyota.co.uk/personal-finance" CVScreenId="f6c0c8d2-2d2f-479f-88c4-91acc6e92652" CvTextArea="1009, 397, 205, 20" CvTextArgument="Finance Calculator (PCP)" CvType="Text" DesignTimeRectangle="1010, 396, 205, 25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='                               Finance Calculator (PCP)                               Finance Calculator (PCP)                             ' parentid='Skip-to-Main-Content' tag='A' /&gt;" Guid="4d894048-7869-4108-a5f9-d6020e87fb7e" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='_17479243218190.aa6a152eb19c13a382e3de748c65b6b2_' title='Personal Finance | Discover car finance options | Toyota UK' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="f6c0c8d2-2d2f-479f-88c4-91acc6e92652" CvTextArea="814, 399, 155, 18" CvTextArgument="Hire Purchase (HP)" CvType="Text" DesignTimeRectangle="815, 396, 155, 25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='                               Hire Purchase (HP)                               Hire Purchase (HP)                             ' parentid='Skip-to-Main-Content' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='                               Hire Purchase (HP)                               Hire Purchase (HP)                             ' parentid='Skip-to-Main-Content' tag='A' type='' class='cmp-anchormenu__link js-anchor-menu-link ' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Hire Purchase (HP)' /&gt;" Guid="df55a9c5-39d7-45eb-8984-1db4bfbe488b" SearchSteps="Selector, FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="5ce60f06e6e588bd4e46358d0d97466b.png" xmlns="">0BDC-vRo3k0K60NfJLsXXFQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
