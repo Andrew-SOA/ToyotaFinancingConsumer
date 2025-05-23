@@ -115,6 +115,12 @@
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="ui:QueueItem" x:Key="iTransactionIteam">[in_TransactionItem]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_Car">[in_TransactionItem.SpecificContent("Column2").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Model">[in_TransactionItem.SpecificContent("Column3").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Model2">[in_TransactionItem.SpecificContent("Column4").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Transmission">[in_TransactionItem.SpecificContent("Column5").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Months">[in_TransactionItem.SpecificContent("Column6").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_ExpectedAnnualMileage">[in_TransactionItem.SpecificContent("Column7").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_CustomerDeposit">[in_TransactionItem.SpecificContent("Column8").ToString]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CaptureFinancingCalculations - Invoke Workflow File (Process\Chrome\CaptureFinancingCalculations.xaml)" sap:VirtualizedContainerService.HintSize="484.8,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Process\Chrome\CaptureFinancingCalculations.xaml">
