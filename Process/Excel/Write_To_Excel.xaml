@@ -1,6 +1,13 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="Write_To_Excel" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="iTransaction" Type="InArgument(ui:QueueItem)" />
+    <x:Property Name="iTransactionItems" Type="InArgument(ui:QueueItem)" />
+    <x:Property Name="in_MonthlyPaymentText" Type="InArgument(x:String)" />
+    <x:Property Name="in_CashPrice" Type="InArgument(x:String)" />
+    <x:Property Name="in_AmountOfCredit" Type="InArgument(x:String)" />
+    <x:Property Name="in_FutureValue" Type="InArgument(x:String)" />
+    <x:Property Name="in_TotalPayable" Type="InArgument(x:String)" />
+    <x:Property Name="in_Term" Type="InArgument(x:String)" />
+    <x:Property Name="in_APR" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -97,28 +104,64 @@
   <Sequence DisplayName="Write_To_Excel" sap:VirtualizedContainerService.HintSize="1177.2,1558.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:String[]" Name="pArray" />
-      <Variable x:TypeArguments="x:String" Name="pMake" />
-      <Variable x:TypeArguments="x:String" Name="pCar" />
-      <Variable x:TypeArguments="x:String" Name="pModel" />
-      <Variable x:TypeArguments="x:String" Name="pModel2" />
-      <Variable x:TypeArguments="x:String" Name="pTransmission" />
-      <Variable x:TypeArguments="x:String" Name="pMonths" />
-      <Variable x:TypeArguments="x:String" Name="pExpectedAnnualMileage" />
-      <Variable x:TypeArguments="x:String" Name="pCustomerDeposit" />
-      <Variable x:TypeArguments="sd:DataTable" Name="pDataTable" />
+      <Variable x:TypeArguments="x:String" Name="pMake">
+        <Variable.Default>
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="iTransactionItems.SpecificContent(&quot;Column1&quot;).ToString" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="pCar">
+        <Variable.Default>
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="iTransactionItems.SpecificContent(&quot;Column2&quot;).ToString" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="pModel">
+        <Variable.Default>
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="iTransactionItems.SpecificContent(&quot;Column3&quot;).ToString" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="pModel2">
+        <Variable.Default>
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="iTransactionItems.SpecificContent(&quot;Column4&quot;).ToString" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="pTransmission">
+        <Variable.Default>
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="iTransactionItems.SpecificContent(&quot;Column5&quot;).ToString" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="pMonths">
+        <Variable.Default>
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="iTransactionItems.SpecificContent(&quot;Column6&quot;).ToString" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="pExpectedAnnualMileage">
+        <Variable.Default>
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="iTransactionItems.SpecificContent(&quot;Column7&quot;).ToString" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="pCustomerDeposit">
+        <Variable.Default>
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="iTransactionItems.SpecificContent(&quot;Column8&quot;).ToString" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="sd:DataTable" Name="pDataTable">
+        <Variable.Default>
+          <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="New DataTable" />
+        </Variable.Default>
+      </Variable>
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BuildDataTable DataTable="[pDataTable]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="433.6,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Make&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Car&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Model&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
+    <ui:BuildDataTable DataTable="[pDataTable]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="433.6,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Make&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Car&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Model&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Model_x0020_2&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Transmission&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Months&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Expected_x0020_Annual_x0020_Mileage&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Customer_x0020_Deposit&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Monthly_x0020_Payment&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Cash_x0020_Price&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Amount_x0020_of_x0020_Credit&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Guaranteed_x0020_Future_x0020_Value_x0020__x002F__x0020_Optional_x0020_Final_x0020_Payment&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Total_x0020_Amount_x0020_Payable&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Term&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;APR&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
     <Assign sap2010:Annotation.AnnotationText="Store all the customer's detail to An Array variable.&#xA;" DisplayName="Store Customer's Details To Array" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="s:String[]">[pArray]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="s:String[]">[{pMake, pCar, pModel, pModel2, pTransmission, pMonths, pExpectedAnnualMileage, pCustomerDeposit}]</InArgument>
+        <InArgument x:TypeArguments="s:String[]">[{pMake, pCar, pModel, pModel2, pTransmission, pMonths }]</InArgument>
       </Assign.Value>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -127,7 +170,7 @@
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
     <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[pArray]" DataTable="[pDataTable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="433.6,220" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
-    <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[iTransaction.SpecificContent(&quot;Car&quot;).ToString]" sap:VirtualizedContainerService.HintSize="433.6,1065.6" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+    <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[iTransactionItems.SpecificContent(&quot;Car&quot;).ToString]" sap:VirtualizedContainerService.HintSize="433.6,1065.6" sap2010:WorkflowViewState.IdRef="Switch`1_1">
       <Switch.Default>
         <Sequence DisplayName="Default" sap:VirtualizedContainerService.HintSize="416,89.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
