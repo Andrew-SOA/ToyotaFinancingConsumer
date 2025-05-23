@@ -135,14 +135,21 @@
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Write_To_Excel - Invoke Workflow File (Write_To_Excel.xaml)" sap:VirtualizedContainerService.HintSize="416,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Process\Excel\Write_To_Excel.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="ui:QueueItem" x:Key="iTransactionItems" />
-        <InArgument x:TypeArguments="x:String" x:Key="in_MonthlyPaymentText" />
-        <InArgument x:TypeArguments="x:String" x:Key="in_CashPrice" />
-        <InArgument x:TypeArguments="x:String" x:Key="in_AmountOfCredit" />
-        <InArgument x:TypeArguments="x:String" x:Key="in_FutureValue" />
-        <InArgument x:TypeArguments="x:String" x:Key="in_TotalPayable" />
-        <InArgument x:TypeArguments="x:String" x:Key="in_Term" />
-        <InArgument x:TypeArguments="x:String" x:Key="in_APR" />
+        <InArgument x:TypeArguments="x:String" x:Key="in_MonthlyPaymentText">[pMonthlyPaymentText]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_CashPrice">[pCashPrice]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_AmountOfCredit">[pAmountOfCrredit]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_FutureValue">[pFutureValue]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_TotalPayable">[pTotalPayable]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Term">[pTerm]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_APR">[pAPR]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Make">[in_TransactionItem.SpecificContent("Column1").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Car">[in_TransactionItem.SpecificContent("Column2").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Model">[in_TransactionItem.SpecificContent("Column3").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Model2">[in_TransactionItem.SpecificContent("Column4").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Transmission">[in_TransactionItem.SpecificContent("Column5").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Months">[in_TransactionItem.SpecificContent("Column6").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_ExpectedAnnualMileage">[in_TransactionItem.SpecificContent("Column7").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_CustomerDeposit">[in_TransactionItem.SpecificContent("Column8").ToString]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>
