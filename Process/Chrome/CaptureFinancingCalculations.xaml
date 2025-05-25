@@ -111,7 +111,7 @@
       <AssemblyReference>System.Linq.Async</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CaptureFinancingCalculations" sap:VirtualizedContainerService.HintSize="1177.2,4739.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CaptureFinancingCalculations" sap:VirtualizedContainerService.HintSize="851.6,4739.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -124,7 +124,7 @@
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="483.2,4371.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="483.20000000000005,3768.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="pText1" />
               <Variable x:TypeArguments="x:String" Name="pText2" />
@@ -135,16 +135,16 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Next 34 Monthly Payments " sap:VirtualizedContainerService.HintSize="449.6,100.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence DisplayName="Next 34 Monthly Payments " sap:VirtualizedContainerService.HintSize="449.6,703.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV'" sap:VirtualizedContainerService.HintSize="416,139.2" sap2010:WorkflowViewState.IdRef="GetValue_1">
                 <ui:GetValue.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7d8789b7-048b-415b-9ca4-ec38c2562b99" InformativeScreenshot="117b0d0bc40f4a0712a961b9248f0d0c" Selector="&lt;webctrl aria-role='presentation' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='codeweaversFinanceTab0' tag='DIV' innertext='                         Next 34 Monthly Payments                         £*                                              ' /&gt;">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7d8789b7-048b-415b-9ca4-ec38c2562b99" InformativeScreenshot="0efaaabcc98cb0d08b0bf81a57b5ba68" Selector="&lt;webctrl aria-role='presentation' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='2' parentid='codeweaversFinanceTab0' tag='DIV' /&gt;">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
@@ -156,20 +156,26 @@
                 <ui:GetValue.Value>
                   <OutArgument x:TypeArguments="x:String">[out_MonthlyPaymentText]</OutArgument>
                 </ui:GetValue.Value>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
               </ui:GetValue>
               <ui:TextToLeftRight TextToLeft="{x:Null}" DisplayName="Text to Left/Right" FullText="[out_MonthlyPaymentText]" sap:VirtualizedContainerService.HintSize="416,306.4" sap2010:WorkflowViewState.IdRef="TextToLeftRight_1" Separator="£" SeparatorKey="Custom" TextToRight="[pText1]" />
               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[pText1]" />
             </Sequence>
-            <Sequence DisplayName="Cash Price" sap:VirtualizedContainerService.HintSize="449.6,703.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <Sequence DisplayName="Cash Price" sap:VirtualizedContainerService.HintSize="449.6,100.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV'" sap:VirtualizedContainerService.HintSize="416,139.2" sap2010:WorkflowViewState.IdRef="GetValue_2">
                 <ui:GetValue.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a6b0990c-228a-4dde-a353-cc24100132e7" InformativeScreenshot="5818f5c77a606380488d03977511a780" Selector="&lt;webctrl aria-role='presentation' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='4' parentid='codeweaversFinanceTab0' tag='DIV' /&gt;">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a6b0990c-228a-4dde-a353-cc24100132e7" InformativeScreenshot="12a2643ab4e4f84bb3fc248fa3bd0bdd" Selector="&lt;webctrl aria-role='presentation' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='4' parentid='codeweaversFinanceTab0' tag='DIV' /&gt;">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
@@ -194,7 +200,7 @@
               </sap:WorkflowViewStateService.ViewState>
               <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV'" sap:VirtualizedContainerService.HintSize="416,139.2" sap2010:WorkflowViewState.IdRef="GetValue_3">
                 <ui:GetValue.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d21de586-d339-4089-a20e-c1d2c30d614b" InformativeScreenshot="6cd5287e741b36d3b38b1c4e52a0191a" Selector="&lt;webctrl aria-role='presentation' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='6' parentid='codeweaversFinanceTab0' tag='DIV' /&gt;">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d21de586-d339-4089-a20e-c1d2c30d614b" InformativeScreenshot="9ecd87955f02eac7eef0598d01f1e469" Selector="&lt;webctrl aria-role='presentation' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='codeweaversFinanceTab0' tag='DIV' idx='6' /&gt;">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
@@ -222,7 +228,7 @@
               </sap:WorkflowViewStateService.ViewState>
               <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV'" sap:VirtualizedContainerService.HintSize="416,139.2" sap2010:WorkflowViewState.IdRef="GetValue_4">
                 <ui:GetValue.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8f01b317-099b-4550-b0d4-4966492505eb" InformativeScreenshot="596855e7ad49948138776c0f70ffba2c" Selector="&lt;webctrl aria-role='presentation' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='codeweaversFinanceTab0' tag='DIV' idx='7' /&gt;">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8f01b317-099b-4550-b0d4-4966492505eb" InformativeScreenshot="b4c2b5b54d0be6a312efed769fe62294" Selector="&lt;webctrl aria-role='presentation' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='codeweaversFinanceTab0' tag='DIV' idx='7' /&gt;">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
@@ -238,19 +244,19 @@
               <ui:TextToLeftRight TextToLeft="{x:Null}" DisplayName="Text to Left/Right" FullText="[out_FutureValue]" sap:VirtualizedContainerService.HintSize="416,306.4" sap2010:WorkflowViewState.IdRef="TextToLeftRight_5" Separator="£" SeparatorKey="Custom" TextToRight="[pText4]" />
               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Trace" Message="[pText4]" />
             </Sequence>
-            <Sequence DisplayName="Total Amount Payable" sap:VirtualizedContainerService.HintSize="449.6,703.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
+            <Sequence DisplayName="Total Amount Payable" sap:VirtualizedContainerService.HintSize="449.6,100.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="pText5" />
               </Sequence.Variables>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV'" sap:VirtualizedContainerService.HintSize="416,139.2" sap2010:WorkflowViewState.IdRef="GetValue_5">
                 <ui:GetValue.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1915bb34-1534-460d-9d2c-aedfe5f43978" InformativeScreenshot="0f1f5e76243e502e39b810dcf33e873f" Selector="&lt;webctrl aria-role='presentation' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='8' parentid='codeweaversFinanceTab0' tag='DIV' /&gt;">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1915bb34-1534-460d-9d2c-aedfe5f43978" InformativeScreenshot="960105df66679a50d3ceb67932c18c77" Selector="&lt;webctrl aria-role='presentation' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='7' parentid='codeweaversFinanceTab0' tag='DIV' /&gt;">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
@@ -277,7 +283,7 @@
               </sap:WorkflowViewStateService.ViewState>
               <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV'" sap:VirtualizedContainerService.HintSize="416,139.2" sap2010:WorkflowViewState.IdRef="GetValue_6">
                 <ui:GetValue.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e6d079bd-405e-4425-9e3a-8e80b1880d09" InformativeScreenshot="074c31ed7340e488469c9b1eb2b13bf1" Selector="&lt;webctrl aria-role='presentation' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='9' parentid='codeweaversFinanceTab0' tag='DIV' /&gt;">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e6d079bd-405e-4425-9e3a-8e80b1880d09" InformativeScreenshot="57f2a6d98572dc3e402ff43e2a19eddc" Selector="&lt;webctrl aria-role='presentation' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='codeweaversFinanceTab0' tag='DIV' idx='9' /&gt;">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
@@ -290,7 +296,7 @@
                   <OutArgument x:TypeArguments="x:String">[out_Term]</OutArgument>
                 </ui:GetValue.Value>
               </ui:GetValue>
-              <ui:TextToLeftRight TextToLeft="{x:Null}" DisplayName="Text to Left/Right" FullText="[out_Term]" sap:VirtualizedContainerService.HintSize="416,306.4" sap2010:WorkflowViewState.IdRef="TextToLeftRight_7" Separator="Term" SeparatorKey="Custom" TextToRight="[pText6]" />
+              <ui:TextToLeftRight TextToLeft="{x:Null}" DisplayName="Text to Left/Right" FullText="[out_Term]" sap:VirtualizedContainerService.HintSize="416,306.4" sap2010:WorkflowViewState.IdRef="TextToLeftRight_9" Separator="Term" SeparatorKey="Custom" TextToRight="[pText6]" />
               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Trace" Message="[pText6]" />
             </Sequence>
             <Sequence DisplayName="Representative" sap:VirtualizedContainerService.HintSize="449.6,694.4" sap2010:WorkflowViewState.IdRef="Sequence_10">
@@ -304,7 +310,7 @@
               </sap:WorkflowViewStateService.ViewState>
               <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV'" sap:VirtualizedContainerService.HintSize="416,139.2" sap2010:WorkflowViewState.IdRef="GetValue_7">
                 <ui:GetValue.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="776409ca-7774-4a47-b6be-46ee535145a3" InformativeScreenshot="93ae13b506366f0ee6061fb5382753c8" Selector="&lt;webctrl aria-role='presentation' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='11' parentid='codeweaversFinanceTab0' tag='DIV' /&gt;">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="776409ca-7774-4a47-b6be-46ee535145a3" InformativeScreenshot="006ce735f7b60658d47a15c2102d697f" Selector="&lt;webctrl aria-role='presentation' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='codeweaversFinanceTab0' tag='DIV' idx='11' /&gt;">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
@@ -317,7 +323,7 @@
                   <OutArgument x:TypeArguments="x:String">[out_APR]</OutArgument>
                 </ui:GetValue.Value>
               </ui:GetValue>
-              <ui:TextToLeftRight TextToLeft="{x:Null}" DisplayName="Text to Left/Right" FullText="[out_APR]" sap:VirtualizedContainerService.HintSize="416,306.4" sap2010:WorkflowViewState.IdRef="TextToLeftRight_8" Separator="Representative" SeparatorKey="Custom" TextToRight="[pText7]" />
+              <ui:TextToLeftRight TextToLeft="{x:Null}" DisplayName="Text to Left/Right" FullText="[out_APR]" sap:VirtualizedContainerService.HintSize="416,306.4" sap2010:WorkflowViewState.IdRef="TextToLeftRight_10" Separator="Representative" SeparatorKey="Custom" TextToRight="[pText7]" />
               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Trace" Message="[pText7]" />
             </Sequence>
           </Sequence>
