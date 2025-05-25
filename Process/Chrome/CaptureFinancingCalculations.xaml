@@ -52,6 +52,7 @@
       <x:String>System.Linq.Expressions</x:String>
       <x:String>UiPath.UIAutomationNext.Contracts</x:String>
       <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Activities.System.Text</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -110,133 +111,215 @@
       <AssemblyReference>System.Linq.Async</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CaptureFinancingCalculations" sap:VirtualizedContainerService.HintSize="1177.2,1916.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CaptureFinancingCalculations" sap:VirtualizedContainerService.HintSize="1177.2,4739.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="483.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Capturing Financing Data&quot;]" />
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe Personal'" sap:VirtualizedContainerService.HintSize="483.2,1719.2" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="9de17ff450757d3999e3dacbeb9e6968" Selector="&lt;html app='chrome.exe' htmlwindowname='_*' title='Personal Finance | Discover car finance options | Toyota UK' /&gt;">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="516.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Capturing Financing Data&quot;]" />
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe Personal'" sap:VirtualizedContainerService.HintSize="516.8,4541.6" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="9de17ff450757d3999e3dacbeb9e6968" Selector="&lt;html app='chrome.exe' htmlwindowname='_*' title='Personal Finance | Discover car finance options | Toyota UK' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,1548.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="483.2,4371.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="pText1" />
+              <Variable x:TypeArguments="x:String" Name="pText2" />
+              <Variable x:TypeArguments="x:String" Name="pText3" />
+            </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV'" sap:VirtualizedContainerService.HintSize="416,139.2" sap2010:WorkflowViewState.IdRef="GetValue_1">
-              <ui:GetValue.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7d8789b7-048b-415b-9ca4-ec38c2562b99" InformativeScreenshot="d22d6d215ff9da950c5f2a86b666da66" Selector="&lt;webctrl aria-role='presentation' tag='IFRAME' /&gt;&lt;webctrl class='codeweaversResults' parentid='codeweaversFinanceTab0' tag='DIV' innertext='£*' parentclass='codeweaversResultElement codeweaversBox' idx='2' /&gt;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </ui:GetValue.Target>
-              <ui:GetValue.Value>
-                <OutArgument x:TypeArguments="x:String">[out_MonthlyPaymentText]</OutArgument>
-              </ui:GetValue.Value>
-            </ui:GetValue>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[out_MonthlyPaymentText]" />
-            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV'" sap:VirtualizedContainerService.HintSize="416,139.2" sap2010:WorkflowViewState.IdRef="GetValue_2">
-              <ui:GetValue.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a6b0990c-228a-4dde-a353-cc24100132e7" InformativeScreenshot="ec79bfad86b4899739acb6d03c7bde7a" Selector="&lt;webctrl aria-role='presentation' tag='IFRAME' /&gt;&lt;webctrl class='codeweaversResults' parentid='codeweaversFinanceTab0' tag='DIV' id='codeweaversFirstPayment' innertext='£*' parentclass='codeweaversResultElement codeweaversBox' /&gt;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </ui:GetValue.Target>
-              <ui:GetValue.Value>
-                <OutArgument x:TypeArguments="x:String">[out_CashPrice]</OutArgument>
-              </ui:GetValue.Value>
-            </ui:GetValue>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[out_CashPrice]" />
-            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV'" sap:VirtualizedContainerService.HintSize="416,139.2" sap2010:WorkflowViewState.IdRef="GetValue_3">
-              <ui:GetValue.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d21de586-d339-4089-a20e-c1d2c30d614b" InformativeScreenshot="25e417e53a65b4ef712494cd5be19311" Selector="&lt;webctrl aria-role='presentation' tag='IFRAME' /&gt;&lt;webctrl class='codeweaversResults' parentid='codeweaversFinanceTab0' tag='DIV' id='codeweaversFirstPayment' innertext='£*' parentclass='codeweaversResultElement codeweaversBox' /&gt;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </ui:GetValue.Target>
-              <ui:GetValue.Value>
-                <OutArgument x:TypeArguments="x:String">[out_AmountOfCredit]</OutArgument>
-              </ui:GetValue.Value>
-            </ui:GetValue>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[out_AmountOfCredit]" />
-            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV'" sap:VirtualizedContainerService.HintSize="416,139.2" sap2010:WorkflowViewState.IdRef="GetValue_4">
-              <ui:GetValue.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8f01b317-099b-4550-b0d4-4966492505eb" InformativeScreenshot="491adc10df089e9ce10856a119bb1e8e" Selector="&lt;webctrl aria-role='presentation' tag='IFRAME' /&gt;&lt;webctrl class='codeweaversResults' parentid='codeweaversFinanceTab0' tag='DIV' innertext='£*' parentclass='codeweaversResultElement codeweaversBox' idx='1' /&gt;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </ui:GetValue.Target>
-              <ui:GetValue.Value>
-                <OutArgument x:TypeArguments="x:String">[out_FutureValue]</OutArgument>
-              </ui:GetValue.Value>
-            </ui:GetValue>
-            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV'" sap:VirtualizedContainerService.HintSize="416,139.2" sap2010:WorkflowViewState.IdRef="GetValue_5">
-              <ui:GetValue.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1915bb34-1534-460d-9d2c-aedfe5f43978" InformativeScreenshot="7292c6a2c63078c7877c9f2510f6877b" Selector="&lt;webctrl aria-role='presentation' tag='IFRAME' /&gt;&lt;webctrl class='codeweaversResults' parentid='codeweaversFinanceTab0' tag='DIV' id='codeweaversFirstPayment' innertext='£*' parentclass='codeweaversResultElement codeweaversBox' /&gt;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </ui:GetValue.Target>
-              <ui:GetValue.Value>
-                <OutArgument x:TypeArguments="x:String">[out_TotalPayable]</OutArgument>
-              </ui:GetValue.Value>
-            </ui:GetValue>
-            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV'" sap:VirtualizedContainerService.HintSize="416,139.2" sap2010:WorkflowViewState.IdRef="GetValue_6">
-              <ui:GetValue.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e6d079bd-405e-4425-9e3a-8e80b1880d09" InformativeScreenshot="72042837cc978d2b1872f09ee9d18b49" Selector="&lt;webctrl aria-role='presentation' tag='IFRAME' /&gt;&lt;webctrl class='codeweaversResults' parentid='codeweaversFinanceTab0' tag='DIV' id='codeweaversFirstPayment' innertext='*' parentclass='codeweaversResultElement codeweaversBox' /&gt;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </ui:GetValue.Target>
-              <ui:GetValue.Value>
-                <OutArgument x:TypeArguments="x:String">[out_Term]</OutArgument>
-              </ui:GetValue.Value>
-            </ui:GetValue>
-            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV'" sap:VirtualizedContainerService.HintSize="416,130.4" sap2010:WorkflowViewState.IdRef="GetValue_7">
-              <ui:GetValue.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="776409ca-7774-4a47-b6be-46ee535145a3" InformativeScreenshot="223bdad75b8e8cd4fe627af1f037e710" Selector="&lt;webctrl aria-role='presentation' tag='IFRAME' /&gt;&lt;webctrl class='codeweaversResults' parentid='codeweaversFinanceTab0' tag='DIV' id='codeweaversFirstPayment' innertext='*' parentclass='codeweaversResultElement codeweaversBox' /&gt;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </ui:GetValue.Target>
-              <ui:GetValue.Value>
-                <OutArgument x:TypeArguments="x:String">[out_APR]</OutArgument>
-              </ui:GetValue.Value>
-            </ui:GetValue>
+            <Sequence DisplayName="Next 34 Monthly Payments " sap:VirtualizedContainerService.HintSize="449.6,100.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV'" sap:VirtualizedContainerService.HintSize="416,139.2" sap2010:WorkflowViewState.IdRef="GetValue_1">
+                <ui:GetValue.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7d8789b7-048b-415b-9ca4-ec38c2562b99" InformativeScreenshot="117b0d0bc40f4a0712a961b9248f0d0c" Selector="&lt;webctrl aria-role='presentation' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='codeweaversFinanceTab0' tag='DIV' innertext='                         Next 34 Monthly Payments                         £*                                              ' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:GetValue.Target>
+                <ui:GetValue.Value>
+                  <OutArgument x:TypeArguments="x:String">[out_MonthlyPaymentText]</OutArgument>
+                </ui:GetValue.Value>
+              </ui:GetValue>
+              <ui:TextToLeftRight TextToLeft="{x:Null}" DisplayName="Text to Left/Right" FullText="[out_MonthlyPaymentText]" sap:VirtualizedContainerService.HintSize="416,306.4" sap2010:WorkflowViewState.IdRef="TextToLeftRight_1" Separator="£" SeparatorKey="Custom" TextToRight="[pText1]" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[pText1]" />
+            </Sequence>
+            <Sequence DisplayName="Cash Price" sap:VirtualizedContainerService.HintSize="449.6,703.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV'" sap:VirtualizedContainerService.HintSize="416,139.2" sap2010:WorkflowViewState.IdRef="GetValue_2">
+                <ui:GetValue.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a6b0990c-228a-4dde-a353-cc24100132e7" InformativeScreenshot="5818f5c77a606380488d03977511a780" Selector="&lt;webctrl aria-role='presentation' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='4' parentid='codeweaversFinanceTab0' tag='DIV' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:GetValue.Target>
+                <ui:GetValue.Value>
+                  <OutArgument x:TypeArguments="x:String">[out_CashPrice]</OutArgument>
+                </ui:GetValue.Value>
+              </ui:GetValue>
+              <ui:TextToLeftRight TextToLeft="{x:Null}" DisplayName="Text to Left/Right" FullText="[out_CashPrice]" sap:VirtualizedContainerService.HintSize="416,306.4" sap2010:WorkflowViewState.IdRef="TextToLeftRight_3" Separator="£" SeparatorKey="Custom" TextToRight="[pText2]" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Trace" Message="[pText2]" />
+            </Sequence>
+            <Sequence DisplayName="Amount of Credit" sap:VirtualizedContainerService.HintSize="449.6,703.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV'" sap:VirtualizedContainerService.HintSize="416,139.2" sap2010:WorkflowViewState.IdRef="GetValue_3">
+                <ui:GetValue.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d21de586-d339-4089-a20e-c1d2c30d614b" InformativeScreenshot="6cd5287e741b36d3b38b1c4e52a0191a" Selector="&lt;webctrl aria-role='presentation' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='6' parentid='codeweaversFinanceTab0' tag='DIV' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:GetValue.Target>
+                <ui:GetValue.Value>
+                  <OutArgument x:TypeArguments="x:String">[out_AmountOfCredit]</OutArgument>
+                </ui:GetValue.Value>
+              </ui:GetValue>
+              <ui:TextToLeftRight TextToLeft="{x:Null}" DisplayName="Text to Left/Right" FullText="[out_AmountOfCredit]" sap:VirtualizedContainerService.HintSize="416,306.4" sap2010:WorkflowViewState.IdRef="TextToLeftRight_4" Separator="£" SeparatorKey="Custom" TextToRight="[pText3]" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Trace" Message="[pText3]" />
+            </Sequence>
+            <Sequence DisplayName="Guaranteed Future Value" sap:VirtualizedContainerService.HintSize="449.6,703.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="pText4" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV'" sap:VirtualizedContainerService.HintSize="416,139.2" sap2010:WorkflowViewState.IdRef="GetValue_4">
+                <ui:GetValue.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8f01b317-099b-4550-b0d4-4966492505eb" InformativeScreenshot="596855e7ad49948138776c0f70ffba2c" Selector="&lt;webctrl aria-role='presentation' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='codeweaversFinanceTab0' tag='DIV' idx='7' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:GetValue.Target>
+                <ui:GetValue.Value>
+                  <OutArgument x:TypeArguments="x:String">[out_FutureValue]</OutArgument>
+                </ui:GetValue.Value>
+              </ui:GetValue>
+              <ui:TextToLeftRight TextToLeft="{x:Null}" DisplayName="Text to Left/Right" FullText="[out_FutureValue]" sap:VirtualizedContainerService.HintSize="416,306.4" sap2010:WorkflowViewState.IdRef="TextToLeftRight_5" Separator="£" SeparatorKey="Custom" TextToRight="[pText4]" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Trace" Message="[pText4]" />
+            </Sequence>
+            <Sequence DisplayName="Total Amount Payable" sap:VirtualizedContainerService.HintSize="449.6,703.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="pText5" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV'" sap:VirtualizedContainerService.HintSize="416,139.2" sap2010:WorkflowViewState.IdRef="GetValue_5">
+                <ui:GetValue.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1915bb34-1534-460d-9d2c-aedfe5f43978" InformativeScreenshot="0f1f5e76243e502e39b810dcf33e873f" Selector="&lt;webctrl aria-role='presentation' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='8' parentid='codeweaversFinanceTab0' tag='DIV' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:GetValue.Target>
+                <ui:GetValue.Value>
+                  <OutArgument x:TypeArguments="x:String">[out_TotalPayable]</OutArgument>
+                </ui:GetValue.Value>
+              </ui:GetValue>
+              <ui:TextToLeftRight TextToLeft="{x:Null}" DisplayName="Text to Left/Right" FullText="[out_TotalPayable]" sap:VirtualizedContainerService.HintSize="416,306.4" sap2010:WorkflowViewState.IdRef="TextToLeftRight_6" Separator="£" SeparatorKey="Custom" TextToRight="[pText5]" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Trace" Message="[pText5]" />
+            </Sequence>
+            <Sequence DisplayName="Term" sap:VirtualizedContainerService.HintSize="449.6,703.2" sap2010:WorkflowViewState.IdRef="Sequence_9">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="pText6" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV'" sap:VirtualizedContainerService.HintSize="416,139.2" sap2010:WorkflowViewState.IdRef="GetValue_6">
+                <ui:GetValue.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e6d079bd-405e-4425-9e3a-8e80b1880d09" InformativeScreenshot="074c31ed7340e488469c9b1eb2b13bf1" Selector="&lt;webctrl aria-role='presentation' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='9' parentid='codeweaversFinanceTab0' tag='DIV' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:GetValue.Target>
+                <ui:GetValue.Value>
+                  <OutArgument x:TypeArguments="x:String">[out_Term]</OutArgument>
+                </ui:GetValue.Value>
+              </ui:GetValue>
+              <ui:TextToLeftRight TextToLeft="{x:Null}" DisplayName="Text to Left/Right" FullText="[out_Term]" sap:VirtualizedContainerService.HintSize="416,306.4" sap2010:WorkflowViewState.IdRef="TextToLeftRight_7" Separator="Term" SeparatorKey="Custom" TextToRight="[pText6]" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Trace" Message="[pText6]" />
+            </Sequence>
+            <Sequence DisplayName="Representative" sap:VirtualizedContainerService.HintSize="449.6,694.4" sap2010:WorkflowViewState.IdRef="Sequence_10">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="pText7" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV'" sap:VirtualizedContainerService.HintSize="416,139.2" sap2010:WorkflowViewState.IdRef="GetValue_7">
+                <ui:GetValue.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="776409ca-7774-4a47-b6be-46ee535145a3" InformativeScreenshot="93ae13b506366f0ee6061fb5382753c8" Selector="&lt;webctrl aria-role='presentation' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='11' parentid='codeweaversFinanceTab0' tag='DIV' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:GetValue.Target>
+                <ui:GetValue.Value>
+                  <OutArgument x:TypeArguments="x:String">[out_APR]</OutArgument>
+                </ui:GetValue.Value>
+              </ui:GetValue>
+              <ui:TextToLeftRight TextToLeft="{x:Null}" DisplayName="Text to Left/Right" FullText="[out_APR]" sap:VirtualizedContainerService.HintSize="416,306.4" sap2010:WorkflowViewState.IdRef="TextToLeftRight_8" Separator="Representative" SeparatorKey="Custom" TextToRight="[pText7]" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Trace" Message="[pText7]" />
+            </Sequence>
           </Sequence>
         </ActivityAction>
       </ui:BrowserScope.Body>
