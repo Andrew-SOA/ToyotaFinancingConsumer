@@ -84,6 +84,14 @@
         "testCaseType": "TestCase",
         "executionTemplateType": "Local",
         "fileName": "Tests\\WorkflowTestCaseTemplate.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "d33f7f5b-c824-4a8f-9c58-7c435de5b4f6",
+        "dataVariationFilePath": ".variations\\Write_To_ExcelTestData_Sheet 1.json",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Process\\Excel\\TestCase.xaml"
       }
     ],
     "saveToCloud": false
