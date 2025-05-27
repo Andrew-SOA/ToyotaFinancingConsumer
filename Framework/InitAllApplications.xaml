@@ -104,7 +104,7 @@
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="1975,1416" sap2010:WorkflowViewState.IdRef="Sequence_9">
+  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="1177.2,2353.6" sap2010:WorkflowViewState.IdRef="Sequence_9">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="FolderExists" />
     </Sequence.Variables>
@@ -114,38 +114,40 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="486,57" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Opening applications...&quot;]">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </ui:LogMessage>
-    <Sequence DisplayName="Sequence - Check Output Folder is Created" sap:VirtualizedContainerService.HintSize="486,1257" sap2010:WorkflowViewState.IdRef="Sequence_13">
+    <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="484.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Opening applications...&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:FolderExistsX DisplayName="Output Folder Exists" Exists="[FolderExists]" sap:VirtualizedContainerService.HintSize="452,57" sap2010:WorkflowViewState.IdRef="FolderExistsX_1" Path="[in_Config(&quot;Output_Folder_Path&quot;).ToString]">
+    </ui:LogMessage>
+    <Sequence DisplayName="Check Output Folder is Created Process" sap:VirtualizedContainerService.HintSize="484.8,1957.6" sap2010:WorkflowViewState.IdRef="Sequence_13">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:FolderExistsX sap2010:Annotation.AnnotationText="Checks whether the specified Output folder already exists at the given directory path." DisplayName="Check if Output Folder Exists" Exists="[FolderExists]" sap:VirtualizedContainerService.HintSize="451.2,210.4" sap2010:WorkflowViewState.IdRef="FolderExistsX_1" Path="[in_Config(&quot;Output_Folder_Path&quot;).ToString]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:FolderExistsX>
-      <If Condition="[FolderExists]" DisplayName="If Folder Doesn't Exist Create Folder" sap:VirtualizedContainerService.HintSize="452,57" sap2010:WorkflowViewState.IdRef="If_1">
+      <If sap2010:Annotation.AnnotationText="Evaluates the boolean result from the &quot;Check if Output Folder Exists&quot; activity. If the folder is missing (False), the process proceeds to create it." Condition="[FolderExists]" DisplayName="Does Folder Not Exist?" sap:VirtualizedContainerService.HintSize="451.2,418.4" sap2010:WorkflowViewState.IdRef="If_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <If.Then>
-          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -155,17 +157,23 @@
           </Sequence>
         </If.Then>
         <If.Else>
-          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,163" sap2010:WorkflowViewState.IdRef="Sequence_12">
+          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,195.2" sap2010:WorkflowViewState.IdRef="Sequence_12">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Output File Folder" sap:VirtualizedContainerService.HintSize="382,103" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[in_Config(&quot;Output_Folder_Path&quot;).ToString]" />
+            <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" sap2010:Annotation.AnnotationText="Create Output Folder If Missing" DisplayName="Create Output File Folder" sap:VirtualizedContainerService.HintSize="382.4,135.2" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[in_Config(&quot;Output_Folder_Path&quot;).ToString]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CreateDirectory>
           </Sequence>
         </If.Else>
       </If>
-      <Sequence DisplayName="Sequence - Create Output File" sap:VirtualizedContainerService.HintSize="452,1051" sap2010:WorkflowViewState.IdRef="Sequence_14">
+      <Sequence DisplayName="Check Output File is Created Process" sap:VirtualizedContainerService.HintSize="451.2,1236.8" sap2010:WorkflowViewState.IdRef="Sequence_18">
         <Sequence.Variables>
           <Variable x:TypeArguments="x:Boolean" Name="OutputFileExists" />
         </Sequence.Variables>
@@ -175,24 +183,26 @@
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:FileExistsX DisplayName="Output File Exists" Exists="[OutputFileExists]" sap:VirtualizedContainerService.HintSize="418,165" sap2010:WorkflowViewState.IdRef="FileExistsX_1" Path="[in_Config(&quot;Output_Folder_Path&quot;).ToString +&quot;\&quot; +  DateTime.Now.ToString(&quot;dd-MM-yyyy&quot;) + &quot;.xlsx&quot;]">
+        <ui:FileExistsX sap2010:Annotation.AnnotationText="This sequence verifies whether the Output folder exists and creates it if it doesn't. " DisplayName="Check if Output Folder Exists" Exists="[OutputFileExists]" sap:VirtualizedContainerService.HintSize="417.6,210.4" sap2010:WorkflowViewState.IdRef="FileExistsX_2" Path="[in_Config(&quot;Output_Folder_Path&quot;).ToString +&quot;\&quot; +  DateTime.Now.ToString(&quot;dd-MM-yyyy&quot;) + &quot;.xlsx&quot;]">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </ui:FileExistsX>
-        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="418,173" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Checking if output file exists...&quot; + OutputFileExists.ToString]" />
-        <If Condition="[OutputFileExists]" DisplayName="If OutputFile Doesn't Exist" sap:VirtualizedContainerService.HintSize="418,630" sap2010:WorkflowViewState.IdRef="If_2">
+        <ui:LogMessage DisplayName="Log Message (Output File Exists)" sap:VirtualizedContainerService.HintSize="417.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Checking if output file exists...&quot; + OutputFileExists.ToString]" />
+        <If sap2010:Annotation.AnnotationText="Evaluates whether the Output folder does not exist. " Condition="[OutputFileExists]" DisplayName="Does OutputFile Not Exist?" sap:VirtualizedContainerService.HintSize="417.6,768.8" sap2010:WorkflowViewState.IdRef="If_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <If.Then>
-            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_16">
+            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,89.6" sap2010:WorkflowViewState.IdRef="Sequence_19">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -201,34 +211,41 @@
             </Sequence>
           </If.Then>
           <If.Else>
-            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,412" sap2010:WorkflowViewState.IdRef="Sequence_17">
+            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,518.4" sap2010:WorkflowViewState.IdRef="Sequence_20">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:CopyFile ContinueOnError="{x:Null}" Destination="[in_Config(&quot;Output_Folder_Path&quot;).ToString]" DisplayName="Copy Template File To Output Folder" sap:VirtualizedContainerService.HintSize="382,186" sap2010:WorkflowViewState.IdRef="CopyFile_2" Path="Data\Input\Template.xlsx">
+              <ui:CopyFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Copies the template file from the source directory to the Output folder for further processing." Destination="[in_Config(&quot;Output_Folder_Path&quot;).ToString]" DisplayName="Copy Template File To Output Folder" sap:VirtualizedContainerService.HintSize="382.4,231.2" sap2010:WorkflowViewState.IdRef="CopyFile_3" Path="Data\Input\Template.xlsx">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:CopyFile>
-              <ui:RenameFileX DisplayName="Rename Output File To Todays Date" FilePath="[in_Config(&quot;Output_Folder_Path&quot;).ToString +&quot;\Template.xlsx&quot;]" sap:VirtualizedContainerService.HintSize="382,166" sap2010:WorkflowViewState.IdRef="RenameFileX_1" KeepExtension="True" NewName="[DateTime.Now.ToString(&quot;dd-MM-yyyy&quot;)]" />
+              <ui:RenameFileX sap2010:Annotation.AnnotationText="Renames the copied Output file by appending or replacing the name with today’s date in the specified format." DisplayName="Rename Output File To Todays Date" FilePath="[in_Config(&quot;Output_Folder_Path&quot;).ToString +&quot;\Template.xlsx&quot;]" sap:VirtualizedContainerService.HintSize="382.4,227.2" sap2010:WorkflowViewState.IdRef="RenameFileX_2" KeepExtension="True" NewName="[DateTime.Now.ToString(&quot;dd-MM-yyyy&quot;)]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:RenameFileX>
             </Sequence>
           </If.Else>
         </If>
       </Sequence>
     </Sequence>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigate_to_Toyota_Personal_Calculator - Invoke Workflow File (Process\Chrome\Navigate_to_Toyota_Personal_Calculator.xaml)" sap:VirtualizedContainerService.HintSize="486,48" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Process\Chrome\Navigate_to_Toyota_Personal_Calculator.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigate_to_Toyota_Personal_Calculator - Invoke Workflow File (Process\Chrome\Navigate_to_Toyota_Personal_Calculator.xaml)" sap:VirtualizedContainerService.HintSize="484.8,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Process\Chrome\Navigate_to_Toyota_Personal_Calculator.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_ToyotaURL">[in_Config("Toyota_URL").ToString]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
